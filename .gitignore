@@ -1,11 +1,47 @@
-# Godot-specific ignores
-.import/
-export.cfg
-export_presets.cfg
-
-# Imported translations (automatically generated from CSV files)
-*.translation
-
-# Mono-specific ignores
-.mono/
-data_*/
+.fscache
+*~
+.directory
+*.blend1
+Export
+## Linux
+.*
+*~
+# Vim
+*.un~
+Session.vim
+## OSX
+Icon
+## Windows
+*.old
+# Windows image file caches
+Thumbs.db
+thumbs.db
+ehthumbs.db
+# Folder config file
+Desktop.ini
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+# Visual studio
+*.suo
+*.ncb
+## Packages
+# it's better to unpack these files and commit the raw source git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.bz2
+*.tar.xz
+## Logs and databases
+*.log
+*.sql
+*.sqlite
+## Git
+!.git
+!.gitignore
+!.gitattributes
+!.gitmodules
