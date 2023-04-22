@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://jb0puf0x5f21"]
+
+[ext_resource type="PackedScene" uid="uid://bj7axy01p8y3a" path="res://Objects/cabinetBedDrawer.glb" id="1_oryph"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_cxyax"]
+
+[node name="cabinetBedDrawer" instance=ExtResource("1_oryph")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_cxyax")]
+transform = Transform3D(0.264678, 0, 0, 0, 0.392219, 0, 0, 0, 0.215698, 0.123538, 0.0672168, -0.0980043)

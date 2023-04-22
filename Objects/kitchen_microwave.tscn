@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://oaehplqxtrym"]
+
+[ext_resource type="PackedScene" uid="uid://dj7c3anjs4kgq" path="res://Objects/kitchenMicrowave.glb" id="1_j8iea"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="2_xuqva"]
+
+[node name="kitchenMicrowave" instance=ExtResource("1_j8iea")]
+
+[node name="Group" parent="kitchenMicrowave(Clone)" index="0"]
+surface_material_override/1 = ExtResource("2_xuqva")

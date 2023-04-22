@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxcfpmb5aj6pb"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_666ky"]
+
+[node name="SmallWindow" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74248, 1.45212, -0.994656)
+
+[node name="Box23" parent="." instance=ExtResource("1_666ky")]
+transform = Transform3D(0.106889, 0, 0, 0, 0.680289, 0, 0, 0, 0.0502191, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box24" parent="." instance=ExtResource("1_666ky")]
+transform = Transform3D(0.106889, 0, 0, 0, -2.54764e-08, -0.0502192, 0, 0.582833, -2.19515e-09, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box25" parent="." instance=ExtResource("1_666ky")]
+transform = Transform3D(0.106889, 0, 0, 0, -2.54764e-08, -0.0502192, 0, 0.582833, -2.19515e-09, 0, 0.32266, 0)
+skeleton = NodePath("")
+
+[node name="Box26" parent="." instance=ExtResource("1_666ky")]
+transform = Transform3D(0.106889, 0, 0, 0, -2.54764e-08, -0.0502192, 0, 0.582833, -2.19515e-09, 0, -0.33984, 0)
+skeleton = NodePath("")
+
+[node name="Box27" parent="." instance=ExtResource("1_666ky")]
+transform = Transform3D(0.106889, 0, 0, 0, 0.680289, 0, 0, 0, 0.0502191, 0, 0, -0.267454)
+skeleton = NodePath("")
+
+[node name="Box28" parent="." instance=ExtResource("1_666ky")]
+transform = Transform3D(0.106889, 0, 0, 0, 0.680289, 0, 0, 0, 0.0502191, 0, 0, 0.26952)
+skeleton = NodePath("")

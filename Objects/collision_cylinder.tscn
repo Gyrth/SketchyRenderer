@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmpt2ndnioqaf"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_an767"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_am1ki"]
+cap_top = false
+cap_bottom = false
+
+[node name="CollisionCylinder" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_an767")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CylinderMesh_am1ki")

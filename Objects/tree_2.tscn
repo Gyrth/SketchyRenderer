@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0a5tgkplsq1b"]
+
+[sub_resource type="Curve" id="Curve_hm0v3"]
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_qc2i0"]
+radius = 0.437
+radial_steps = 5
+sections = 6
+curve = SubResource("Curve_hm0v3")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ty1w1"]
+height = 1.53381
+radius = 0.370852
+
+[node name="Tree2" type="MeshInstance3D"]
+transform = Transform3D(1.85786, 0, 0, 0, 3.46934, 0, 0, 0, 1.85786, -9.4366, 2.42162, 4.16095)
+mesh = SubResource("TubeTrailMesh_qc2i0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, -4.09613e-15, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_ty1w1")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 2.56906e-08, 0, -4.68156e-08, -0.157368, 0, 0, 0, 1, 0, -0.694271, 0)
+mesh = SubResource("TubeTrailMesh_qc2i0")
+skeleton = NodePath("../..")

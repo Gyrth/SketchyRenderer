@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://binqjygl7hnte"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_ttiuo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pl2d8"]
+size = Vector3(0.195411, 0.53239, 0.169612)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_akqwb"]
+size = Vector3(0.135507, 0.161296, 3.14216)
+
+[node name="Seesaw" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.54591, 0.399546, -9.0969)
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.0083155, 0)
+node_a = NodePath("../StaticBody3D")
+node_b = NodePath("../RigidBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Box" parent="StaticBody3D" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.0279094, 0, 0, 0, 0.489297, 0, 0, 0, 0.151365, 0.077733, -0.228257, 0)
+
+[node name="Box2" parent="StaticBody3D" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.0279094, 0, 0, 0, 0.489297, 0, 0, 0, 0.151365, -0.0767956, -0.228257, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.242641, 0)
+shape = SubResource("BoxShape3D_pl2d8")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.980378, -0.197127, 0, 0.197127, 0.980378, 0, 0, 0)
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_akqwb")
+
+[node name="Box" parent="RigidBody3D" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.128679, 0, 0, 0, 0.153026, 0, 0, 0, 3.13731, 0, 0, 0)
+
+[node name="Box2" parent="RigidBody3D" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.142374, 0, 0, 0, 0.0198009, 4.65661e-10, 0, 4.65661e-10, 0.0253289, 0, 0.153535, 1.21642)
+
+[node name="Box5" parent="RigidBody3D/Box2" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.126089, 0.522987, 0, -0.523435, 6.51325, -1.49012e-08, 0, -5.96046e-08, 0.998322, 0.171036, -3.47208, 0)
+skeleton = NodePath("../..")
+
+[node name="Box6" parent="RigidBody3D/Box2" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.126089, -0.522987, 0, 0.523435, 6.51325, -1.49012e-08, 0, -5.96046e-08, 0.998322, -0.175812, -3.48476, 3.05176e-05)
+skeleton = NodePath("../..")
+
+[node name="Box4" parent="RigidBody3D" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.142374, 0, 0, 0, 0.0198009, 4.65661e-10, 0, 4.65661e-10, 0.0253289, 0, 0.153535, -1.21622)
+
+[node name="Box5" parent="RigidBody3D/Box4" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.126089, 0.522987, 0, -0.523435, 6.51325, -1.49012e-08, 0, -5.96046e-08, 0.998322, 0.171036, -3.47208, 0)
+skeleton = NodePath("../..")
+
+[node name="Box6" parent="RigidBody3D/Box4" instance=ExtResource("1_ttiuo")]
+transform = Transform3D(0.126089, -0.522987, 0, 0.523435, 6.51325, -1.49012e-08, 0, -5.96046e-08, 0.998322, -0.175812, -3.48476, 3.05176e-05)
+skeleton = NodePath("../..")

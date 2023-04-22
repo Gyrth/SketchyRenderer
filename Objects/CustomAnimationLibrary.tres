@@ -1,0 +1,8 @@
+[gd_resource type="AnimationLibrary" load_steps=2 format=3 uid="uid://dgrasx00fj7tq"]
+
+[ext_resource type="Animation" uid="uid://cwhvt008vggr2" path="res://Objects/boy/Pickup.tres" id="1_w7let"]
+
+[resource]
+_data = {
+"Pickup": ExtResource("1_w7let")
+}

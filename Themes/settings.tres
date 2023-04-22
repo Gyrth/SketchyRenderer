@@ -1,0 +1,67 @@
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://cfpd70cpbjet4"]
+
+[ext_resource type="FontFile" uid="uid://qgsolq0v3tlv" path="res://Fonts/Kenney Future Narrow.ttf" id="1_dta5d"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_ipsbi"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_8oxs8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knqjj"]
+bg_color = Color(0, 0, 0, 0.780392)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6oip"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 0.568627)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ilfgx"]
+color = Color(0, 0, 0, 0.219608)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 10
+
+[sub_resource type="ImageTexture" id="ImageTexture_20qce"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hv0ri"]
+bg_color = Color(0, 0, 0, 0.486275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ghlm"]
+bg_color = Color(0, 0, 0, 0.486275)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqkuc"]
+bg_color = Color(0, 0, 0, 0.764706)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_veyux"]
+bg_color = Color(0, 0, 0, 0.486275)
+
+[sub_resource type="ImageTexture" id="ImageTexture_q3fbr"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_y0ouk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ks48x"]
+bg_color = Color(0, 0, 0, 0.486275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46qfq"]
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+
+[resource]
+default_font = ExtResource("1_dta5d")
+default_font_size = 35
+Button/constants/outline_size = 0
+HSlider/icons/grabber = SubResource("ImageTexture_ipsbi")
+HSlider/icons/grabber_highlight = SubResource("ImageTexture_8oxs8")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_knqjj")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_m6oip")
+HSlider/styles/slider = SubResource("StyleBoxLine_ilfgx")
+Label/colors/font_color = Color(0, 0, 0, 0.784314)
+OptionButton/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+OptionButton/constants/outline_size = 0
+OptionButton/icons/arrow = SubResource("ImageTexture_20qce")
+OptionButton/styles/focus = SubResource("StyleBoxFlat_hv0ri")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_4ghlm")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_pqkuc")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_veyux")
+PopupMenu/icons/radio_checked = SubResource("ImageTexture_q3fbr")
+PopupMenu/icons/radio_unchecked = SubResource("ImageTexture_y0ouk")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_ks48x")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_46qfq")

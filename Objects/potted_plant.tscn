@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cycw2eyd7v442"]
+
+[ext_resource type="PackedScene" uid="uid://bfir7m3bxj3u2" path="res://Objects/pottedPlant.glb" id="1_xkjof"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dkfco"]
+height = 1.18053
+radius = 0.12909
+
+[node name="pottedPlant" instance=ExtResource("1_xkjof")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+shape = SubResource("CylinderShape3D_dkfco")

@@ -1,0 +1,30 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://cx4h8ot7dh8vo"]
+
+[ext_resource type="Shader" uid="uid://ijlcwhsfuwoa" path="res://Shaders/sobel.tres" id="1_qjw03"]
+[ext_resource type="Texture2D" uid="uid://b8e18mp18esuc" path="res://Textures/dots.png" id="3_axiq5"]
+[ext_resource type="Texture2D" uid="uid://bna2735fneyq0" path="res://Textures/lines.png" id="3_cbvkx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5767r"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_y822g"]
+in_3d_space = true
+seamless = true
+noise = SubResource("FastNoiseLite_5767r")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qjw03")
+shader_parameter/tint_color = Color(1, 1, 1, 1)
+shader_parameter/line_color = Color(0.160784, 0.160784, 0.160784, 1)
+shader_parameter/red_weight = 0.5
+shader_parameter/green_weight = 0.5
+shader_parameter/blue_weight = 0.5
+shader_parameter/noise_offset_multiplier = 0.5
+shader_parameter/grain_amount = 0.2
+shader_parameter/black_shadow_amount = -0.1
+shader_parameter/normal_edge_detection = 1.0
+shader_parameter/depth_edge_detection = 1.0
+shader_parameter/line_size = 1.0
+shader_parameter/texture_noise = SubResource("NoiseTexture2D_y822g")
+shader_parameter/texture_lines = ExtResource("3_cbvkx")
+shader_parameter/texture_grain = ExtResource("3_axiq5")

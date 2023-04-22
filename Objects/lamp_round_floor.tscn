@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bajejbtqctcuj"]
+
+[ext_resource type="PackedScene" uid="uid://jkx03qeyrch3" path="res://Objects/lampRoundFloor.glb" id="1_goxhj"]
+[ext_resource type="PackedScene" uid="uid://cmpt2ndnioqaf" path="res://Objects/collision_cylinder.tscn" id="2_fbbg5"]
+
+[node name="lampRoundFloor" instance=ExtResource("1_goxhj")]
+
+[node name="CollisionCylinder" parent="." index="1" instance=ExtResource("2_fbbg5")]
+transform = Transform3D(0.18121, 0, 0, 0, 0.53032, 0, 0, 0, 0.18121, 0.0618317, 0.331082, -0.0603946)

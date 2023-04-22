@@ -1,0 +1,169 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr5hu6ooqovbm"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_tkg2p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2flvc"]
+size = Vector3(1, 1, 1.95014)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_we8ov"]
+size = Vector3(2.99228, 1.5975, 0.273474)
+
+[node name="Bridge" type="Node3D"]
+
+[node name="Box45" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 1.16031, 0, 0, 0, 0.142226, 1.39315, 0.00750607, -1.02168)
+skeleton = NodePath("")
+
+[node name="Box46" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 1.16031, 0, 0, 0, 0.142226, -1.393, 0.008, 1.022)
+skeleton = NodePath("")
+
+[node name="Box47" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 1.16031, 0, 0, 0, 0.142226, -1.393, 0.008, -1.022)
+skeleton = NodePath("")
+
+[node name="Box48" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 1.16031, 0, 0, 0, 0.142226, 1.39309, 0.008, 1.022)
+skeleton = NodePath("")
+
+[node name="Box49" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 0.959012, 0, 0, 0, 0.142226, 0.401727, 0.337716, 1.022)
+skeleton = NodePath("")
+
+[node name="Box50" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 0.959012, 0, 0, 0, 0.142226, -0.402, 0.338, 1.022)
+skeleton = NodePath("")
+
+[node name="Box51" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 0.959012, 0, 0, 0, 0.142226, 0.401727, 0.337716, -1.06015)
+skeleton = NodePath("")
+
+[node name="Box52" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.149272, 0, 0, 0, 0.959012, 0, 0, 0, 0.142226, -0.402, 0.338, -1.06015)
+skeleton = NodePath("")
+
+[node name="Box41" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.169832, 0.0114633, 0, -0.0527375, 0.0369157, 0, 0, 0, 1.89965, 1.39315, -0.327466, 0)
+skeleton = NodePath("")
+
+[node name="Box42" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.168137, 0.0125885, 0, -0.057914, 0.0365473, 0, 0, 0, 1.89965, 1.1785, -0.260753, 0)
+skeleton = NodePath("")
+
+[node name="Box43" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.167178, 0.0131782, 0, -0.0606267, 0.0363389, 0, 0, 0, 1.89965, 0.965428, -0.183559, 0)
+skeleton = NodePath("")
+
+[node name="Box44" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.170262, 0.0111582, 0, -0.0513337, 0.0370091, 0, 0, 0, 1.89965, 0.746922, -0.107324, 0)
+skeleton = NodePath("")
+
+[node name="Box65" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.1743, 0.00766616, 0, -0.0352685, 0.0378868, 0, 0, 0, 1.89965, 0.524866, -0.0466453, 0)
+skeleton = NodePath("")
+
+[node name="Box66" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.176569, 0.00459829, 0, -0.0211546, 0.0383801, 0, 0, 0, 1.89965, 0.309464, -0.0153947, 0)
+skeleton = NodePath("")
+
+[node name="Box67" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.177832, 0, 0, 0, 0.0386546, 0, 0, 0, 1.89965, 0.105092, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box75" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(9.71567e-16, 1.68965e-09, 0.84571, 0.177832, -1.68965e-09, 0, 7.77328e-09, 0.0386546, -3.69671e-08, 0, -0.077, 0.973)
+skeleton = NodePath("")
+
+[node name="Box76" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.0460263, 1.19476e-09, 0.99327, 0.171773, -2.06939e-09, -0.266146, 7.77329e-09, 0.0386546, -4.49488e-08, 0.893731, -0.20979, 0.973)
+skeleton = NodePath("")
+
+[node name="Box77" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.0460263, 2.06939e-09, 0.99327, 0.171773, -1.19476e-09, 0.266146, 7.77329e-09, 0.0386546, -4.49488e-08, -0.894, -0.21, 0.973)
+skeleton = NodePath("")
+
+[node name="Box81" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(8.1951e-16, 1.70474e-09, 0.846, 0.15, -1.70474e-09, -3.0056e-15, 6.55671e-09, 0.039, -3.69798e-08, 0, 0.680575, 1.02311)
+skeleton = NodePath("")
+
+[node name="Box82" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.03902, 1.26994e-09, 0.998014, 0.145625, -1.65502e-09, -0.267417, 4.88439e-09, 0.0391981, -4.36246e-08, 0.893731, 0.547785, 1.02311)
+skeleton = NodePath("")
+
+[node name="Box83" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.0388229, 2.14596e-09, 0.992972, 0.144889, -1.64666e-09, 0.266066, 8.25371e-09, 0.039, -4.34042e-08, -0.894, 0.547575, 1.02311)
+skeleton = NodePath("")
+
+[node name="Box84" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(8.1951e-16, 1.70474e-09, 0.846, 0.15, -1.70474e-09, -3.0056e-15, 6.55671e-09, 0.039, -3.69798e-08, 0, 0.680575, -1.02224)
+skeleton = NodePath("")
+
+[node name="Box85" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.03902, 1.26994e-09, 0.998014, 0.145625, -1.65502e-09, -0.267417, 4.88439e-09, 0.0391981, -4.36246e-08, 0.893731, 0.547785, -1.02224)
+skeleton = NodePath("")
+
+[node name="Box86" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.0388229, 2.14596e-09, 0.992972, 0.144889, -1.64666e-09, 0.266066, 8.25371e-09, 0.039, -4.34042e-08, -0.894, 0.547575, -1.02224)
+skeleton = NodePath("")
+
+[node name="Box78" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(9.71567e-16, 1.68965e-09, 0.84571, 0.177832, -1.68965e-09, 0, 7.77328e-09, 0.0386546, -3.69671e-08, 0, -0.077, -0.970902)
+skeleton = NodePath("")
+
+[node name="Box79" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(0.0460263, 1.19476e-09, 0.99327, 0.171773, -2.06939e-09, -0.266146, 7.77329e-09, 0.0386546, -4.49488e-08, 0.893731, -0.20979, -0.970902)
+skeleton = NodePath("")
+
+[node name="Box80" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.0460263, 2.06939e-09, 0.99327, 0.171773, -1.19476e-09, 0.266146, 7.77329e-09, 0.0386546, -4.49488e-08, -0.894, -0.21, -0.970902)
+skeleton = NodePath("")
+
+[node name="Box68" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.169832, -0.0114633, -1.66072e-07, -0.0527375, 0.0369157, 0, 1.48472e-08, 1.00216e-09, -1.89965, -1.40401, -0.327466, 0)
+skeleton = NodePath("")
+
+[node name="Box69" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.168137, -0.0125885, -1.66072e-07, -0.057914, 0.0365473, 0, 1.4699e-08, 1.10052e-09, -1.89965, -1.18935, -0.260753, 0)
+skeleton = NodePath("")
+
+[node name="Box70" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.167178, -0.0131782, -1.66072e-07, -0.0606267, 0.0363389, 0, 1.46152e-08, 1.15207e-09, -1.89965, -0.976277, -0.183559, 0)
+skeleton = NodePath("")
+
+[node name="Box71" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.170262, -0.0111582, -1.66072e-07, -0.0513337, 0.0370091, 0, 1.48848e-08, 9.75481e-10, -1.89965, -0.757771, -0.107324, 0)
+skeleton = NodePath("")
+
+[node name="Box72" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.1743, -0.00766616, -1.66072e-07, -0.0352684, 0.0378868, 0, 1.52378e-08, 6.70197e-10, -1.89965, -0.535715, -0.0466453, 0)
+skeleton = NodePath("")
+
+[node name="Box73" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.176569, -0.00459829, -1.66072e-07, -0.0211546, 0.0383801, 0, 1.54362e-08, 4.01996e-10, -1.89965, -0.320312, -0.0153947, 0)
+skeleton = NodePath("")
+
+[node name="Box74" parent="." instance=ExtResource("1_tkg2p")]
+transform = Transform3D(-0.177832, 0, -1.66072e-07, 0, 0.0386546, 0, 1.55466e-08, 0, -1.89965, -0.115941, 0, 0)
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.495335, 0)
+shape = SubResource("BoxShape3D_2flvc")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0217507, 0.960965)
+shape = SubResource("BoxShape3D_we8ov")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.022, -0.961)
+shape = SubResource("BoxShape3D_we8ov")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.954366, 0.298641, 0, -0.298641, 0.954366, 0, 0, 0, 1, 0.829576, -0.623867, 0)
+shape = SubResource("BoxShape3D_2flvc")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.95424, -0.299041, 0, 0.299041, 0.95424, 0, 0, 0, 1, -0.83, -0.624, 0)
+shape = SubResource("BoxShape3D_2flvc")

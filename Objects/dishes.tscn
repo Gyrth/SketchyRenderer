@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkdr38pdpagmm"]
+
+[ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="1_sn2td"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="2_klb0l"]
+
+[node name="Dishes" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.40462, 0.440597, -1.05596)
+
+[node name="Cylinder" parent="." instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.262579, 0, 0, 0, 0.00357869, 0, 0, 0, 0.262579, 0, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder2" parent="Cylinder" instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.739689, 0, 0, 0, 0.739689, 0, 0, 0, 0.739689, 0, 1.25034, 0)
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_klb0l")
+
+[node name="Cylinder5" parent="." instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.262579, 0, 0, 0, 0.00357869, 0, 0, 0, 0.262579, 0.0614424, -0.0233084, -0.00458252)
+skeleton = NodePath("../..")
+
+[node name="Cylinder2" parent="Cylinder5" instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.739689, 0, 0, 0, 0.739689, 0, 0, 0, 0.739689, 0, 1.24613, 0)
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_klb0l")
+
+[node name="Cylinder6" parent="." instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.262579, 0, 0, 0, 0.00357869, 0, 0, 0, 0.262579, 0.111954, -0.0317858, 0.0249175)
+skeleton = NodePath("../..")
+
+[node name="Cylinder2" parent="Cylinder6" instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.739689, 0, 0, 0, 0.739689, 0, 0, 0, 0.739689, 0, 0.981926, 0)
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_klb0l")
+
+[node name="Cylinder2" parent="." instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.262579, 0, 0, 0, 0.00357869, 0, 0, 0, 0.262579, 0.0311308, 0.010178, 0.0466526)
+skeleton = NodePath("../..")
+
+[node name="Cylinder2" parent="Cylinder2" instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.739689, 0, 0, 0, 0.739689, 0, 0, 0, 0.739689, 0, 0.749657, 0)
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_klb0l")
+
+[node name="Cylinder3" parent="." instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.262579, 0, 0, 0, 0.00357869, 0, 0, 0, 0.262579, 0.0153265, 0.0263241, 0.0852143)
+skeleton = NodePath("../..")
+
+[node name="Cylinder2" parent="Cylinder3" instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.739689, 0, 0, 0, 0.739689, 0, 0, 0, 0.739689, 0, 0.977478, 0)
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_klb0l")
+
+[node name="Cylinder4" parent="." instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.168454, 0, 0, 0, 0.0646876, 0, 0, 0, 0.168454, 0.189728, 0.00114173, 0.224885)
+skeleton = NodePath("../..")
+
+[node name="Cylinder5" parent="Cylinder4" instance=ExtResource("1_sn2td")]
+transform = Transform3D(0.895379, 0, 0, 0, 0.0317783, 0, 0, 0, 0.895379, 0, 0.97444, 0)
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_klb0l")

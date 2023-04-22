@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://cf2hkdl0fii2t"]
+
+[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="1_8c6l4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t3okl"]
+height = 1.16398
+radius = 0.955033
+
+[sub_resource type="TorusMesh" id="TorusMesh_kriqj"]
+rings = 16
+ring_segments = 4
+
+[sub_resource type="TorusMesh" id="TorusMesh_ifk2b"]
+inner_radius = 0.425
+rings = 16
+ring_segments = 3
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_akva5"]
+top_radius = 0.275
+height = 1.076
+radial_segments = 16
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gdn46"]
+radial_segments = 16
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mylu6"]
+shading_mode = 0
+albedo_color = Color(0, 1, 0, 1)
+billboard_keep_scale = true
+
+[sub_resource type="Curve" id="Curve_y6ldj"]
+_data = [Vector2(0, 0.472393), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_0ujth"]
+curve = SubResource("Curve_y6ldj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b4kul"]
+particle_flag_align_y = true
+direction = Vector3(0, 1, 0)
+spread = 25.0
+initial_velocity_min = 2.0
+initial_velocity_max = 2.5
+scale_min = 0.25
+scale_max = 0.25
+scale_curve = SubResource("CurveTexture_0ujth")
+
+[sub_resource type="QuadMesh" id="QuadMesh_6horc"]
+size = Vector2(0.01, 0.5)
+
+[node name="Fountain" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9926, 0, 3.90478)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30284, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_t3okl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_kriqj")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.393405, 0, 0, 0, 0.155838, 0, 0, 0, 0.393405, 0, 0.499658, 0)
+mesh = SubResource("TorusMesh_ifk2b")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.468211, 0, 0, 0, 0.146695, 0, 0, 0, 0.468211, 0, 0.0676865, 0)
+mesh = SubResource("CylinderMesh_akva5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.262597, 0, 0, 0, 0.174446, 0, 0, 0, 0.262597, 0, 0.291813, 0)
+mesh = SubResource("CylinderMesh_gdn46")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.224036, 0, 0, 0, 0.0701928, 0, 0, 0, 0.224036, 0, 0.512354, 0)
+mesh = SubResource("CylinderMesh_akva5")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.182476, 0, 0, 0, -0.0571715, -1.51711e-08, 0, 6.06844e-09, -0.182476, 0, 0.71432, 0)
+mesh = SubResource("CylinderMesh_akva5")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125651, 0, 0, 0, 0.0834713, 0, 0, 0, 0.125651, 0, 0.619597, 0)
+mesh = SubResource("CylinderMesh_gdn46")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.501203, 0, 0, 0, 0.0261055, 0, 0, 0, 0.501203, 0, 0.485748, 0)
+mesh = SubResource("CylinderMesh_gdn46")
+surface_material_override/0 = ExtResource("1_8c6l4")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.43223, 0, 0, 0, 0.0745986, 0, 0, 0, 1.43223, 0, -0.0298439, 0)
+mesh = SubResource("CylinderMesh_gdn46")
+surface_material_override/0 = ExtResource("1_8c6l4")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639417, 0)
+material_override = SubResource("StandardMaterial3D_mylu6")
+amount = 64
+lifetime = 0.75
+interpolate = false
+process_material = SubResource("ParticleProcessMaterial_b4kul")
+draw_pass_1 = SubResource("QuadMesh_6horc")

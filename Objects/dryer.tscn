@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbnb8c0qa3d20"]
+
+[ext_resource type="PackedScene" uid="uid://cvbumpcotbegq" path="res://Objects/dryer.glb" id="1_7l74s"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_6mvdp"]
+
+[node name="dryer" instance=ExtResource("1_7l74s")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_6mvdp")]
+transform = Transform3D(0.393254, 0, 0, 0, 0.514978, 0, 0, 0, 0.365564, 0.194904, 0.213057, -0.160988)

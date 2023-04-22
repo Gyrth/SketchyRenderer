@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://badilss1bbwwm"]
+
+[ext_resource type="Material" uid="uid://bp0a38f7wvabo" path="res://Materials/wave.tres" id="1_hfi5j"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_tiryl"]
+
+[node name="Wave" type="MeshInstance3D"]
+mesh = SubResource("QuadMesh_tiryl")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_hfi5j")

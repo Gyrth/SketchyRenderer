@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cifoy8m8badbt"]
+
+[ext_resource type="PackedScene" uid="uid://cka1rto0ciy08" path="res://Objects/cabinetTelevision.glb" id="1_cd6of"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_3k17v"]
+
+[node name="cabinetTelevision" instance=ExtResource("1_cd6of")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_3k17v")]
+transform = Transform3D(0.803424, 0, 0, 0, 0.322064, 0, 0, 0, 0.249395, 0.399828, 0.151165, -0.12465)

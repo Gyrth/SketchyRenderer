@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfji0xpueuits"]
+
+[ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="1_jl8dv"]
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="2_73agk"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uodn2"]
+top_radius = 0.988
+bottom_radius = 0.292
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7txfb"]
+top_radius = 0.988
+bottom_radius = 0.292
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_33cau"]
+height = 1.50121
+
+[node name="Telescope" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1913, 0.405598, -13.8584)
+
+[node name="Cylinder" parent="." instance=ExtResource("1_jl8dv")]
+transform = Transform3D(1, 0, 0, 0, 0.156129, 0, 0, 0, 1, 0, -0.363474, 0)
+skeleton = NodePath("../..")
+
+[node name="Box" parent="." instance=ExtResource("2_73agk")]
+transform = Transform3D(0.162846, 0, 0, 0, 0.305376, 0, 0, 0, 0.109704, 0, 0.300784, 0.0773335)
+skeleton = NodePath("../Cylinder2")
+
+[node name="Box41" parent="." instance=ExtResource("2_73agk")]
+transform = Transform3D(0.27283, 0, 0, 0, 0.0504629, 0, 0, 0, 0.109704, 0, 0.742865, 0.00285721)
+skeleton = NodePath("../Cylinder2")
+
+[node name="Box72" parent="." instance=ExtResource("2_73agk")]
+transform = Transform3D(0.0636411, 0.0208864, 0, -0.237513, 0.0055965, 0, 0, 0, 0.109704, 0.114591, 0.839362, 0.00285721)
+skeleton = NodePath("../Cylinder2")
+
+[node name="Box73" parent="." instance=ExtResource("2_73agk")]
+transform = Transform3D(-0.0636411, 0.0208864, 0, -0.237513, -0.0055965, 0, 0, 0, 0.109704, -0.113053, 0.839362, 0.00285721)
+skeleton = NodePath("../Cylinder2")
+
+[node name="Cylinder2" parent="." instance=ExtResource("1_jl8dv")]
+transform = Transform3D(0.198043, 0, 0, 0, 0.748048, 0, 0, 0, 0.198043, 0, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="." instance=ExtResource("1_jl8dv")]
+transform = Transform3D(0.10692, 0, 0, 0, -1.76533e-08, 0.106921, 0, -0.403859, -4.67364e-09, -0.0511751, 0.929652, 0)
+mesh = SubResource("CylinderMesh_uodn2")
+skeleton = NodePath("../..")
+
+[node name="Cylinder4" parent="." instance=ExtResource("1_jl8dv")]
+transform = Transform3D(0.10692, 0, 0, 0, -1.76533e-08, 0.106921, 0, -0.403859, -4.67364e-09, 0.0507822, 0.929652, 0)
+mesh = SubResource("CylinderMesh_7txfb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.232703, 0)
+shape = SubResource("CylinderShape3D_33cau")

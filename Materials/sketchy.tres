@@ -1,0 +1,31 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://crqmmno0ycmhh"]
+
+[ext_resource type="Shader" uid="uid://c3ayms48ksj44" path="res://Shaders/sketchy.tres" id="1_w0w4c"]
+[ext_resource type="Texture2D" uid="uid://b8e18mp18esuc" path="res://Textures/dots.png" id="2_q86hx"]
+[ext_resource type="Texture2D" uid="uid://bna2735fneyq0" path="res://Textures/lines.png" id="3_pbd0r"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_c6ebn"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_72ulp"]
+noise = SubResource("FastNoiseLite_c6ebn")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_w0w4c")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 1.0
+shader_parameter/highlight_strength = 1.0
+shader_parameter/highlight_color = Color(0, 0, 0, 1)
+shader_parameter/tint_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/noise_offset_multiplier = 0.5
+shader_parameter/red_weight = 0.5
+shader_parameter/green_weight = 0.5
+shader_parameter/blue_weight = 0.5
+shader_parameter/black_shadow_amount = -0.1
+shader_parameter/grain_amount = 0.2
+shader_parameter/line_size = 1.0
+shader_parameter/texture_noise = SubResource("NoiseTexture2D_72ulp")
+shader_parameter/texture_lines = ExtResource("3_pbd0r")
+shader_parameter/texture_grain = ExtResource("2_q86hx")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://crtu0gdbccc1n"]
+
+[ext_resource type="PackedScene" uid="uid://dlvr6k82il55p" path="res://Objects/kitchenStove.glb" id="1_qf62w"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_lnuee"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="2_qagwe"]
+
+[node name="kitchenStove" instance=ExtResource("1_qf62w")]
+
+[node name="door" parent="kitchenStove(Clone)" index="0"]
+surface_material_override/1 = ExtResource("2_qagwe")
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_lnuee")]
+transform = Transform3D(0.437615, 0, 0, 0, 0.672939, 0, 0, 0, 0.481048, 0.212275, 0.104465, -0.233432)

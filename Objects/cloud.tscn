@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://caw7y33lpv83d"]
+
+[ext_resource type="PackedScene" uid="uid://cxbc7loouyp5l" path="res://Objects/sphere.tscn" id="1_ejuhj"]
+
+[node name="Cloud" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0972, 4.43929, -18.1706)
+
+[node name="Sphere" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.855096, 0, 0)
+skeleton = NodePath("")
+
+[node name="Sphere2" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(1.33524, 0, 0, 0, 1.33524, 0, 0, 0, 1.33524, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="Sphere3" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.919783, 0, 0)
+skeleton = NodePath("")
+
+[node name="Sphere4" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57991, 0.263551, 0)
+skeleton = NodePath("")
+
+[node name="Sphere5" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(0.818705, 0, 0, 0, 0.818705, 0, 0, 0, 0.818705, 0.881117, 0.775047, 0)
+skeleton = NodePath("")
+
+[node name="Sphere6" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(0.818705, 0, 0, 0, 0.818705, 0, 0, 0, 0.818705, 0.197238, 1.0924, 0)
+skeleton = NodePath("")
+
+[node name="Sphere7" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(0.818705, 0, 0, 0, 0.818705, 0, 0, 0, 0.818705, -0.490851, 0.894965, 0)
+skeleton = NodePath("")
+
+[node name="Sphere8" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(1.00897, 0, 0, 0, 1.00897, 0, 0, 0, 1.00897, -0.540868, 0.409991, 0)
+skeleton = NodePath("")
+
+[node name="Sphere9" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(1.00897, 0, 0, 0, 1.00897, 0, 0, 0, 1.00897, 0.159149, 0.59304, 0)
+skeleton = NodePath("")
+
+[node name="Sphere10" parent="." instance=ExtResource("1_ejuhj")]
+transform = Transform3D(1.11515, 0, 0, 0, 1.11515, 0, 0, 0, 1.11515, 0.800147, 0.399556, 0)
+skeleton = NodePath("")

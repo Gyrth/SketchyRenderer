@@ -1,0 +1,23 @@
+[gd_resource type="Shader" format=3 uid="uid://br63un1kutc5q"]
+
+[resource]
+code = "shader_type spatial;
+
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform float vignette_open : hint_range(0.0, 1.0, 0.0001) = 0.0;
+
+float vignette(vec2 uv){
+	uv *= 1.0 - uv.xy;
+	float vignette = uv.x * uv.y * 8.0;
+	return pow(vignette, 1.0 - vignette_open);
+}
+
+void fragment(){
+	ALBEDO = albedo.rgb;
+	// Skip trying to apply the vignette when it's completely open to save on performance.
+	if(vignette_open > 0.0 && 1.0 - vignette(SCREEN_UV) < 0.5){
+		discard;
+	}
+}"

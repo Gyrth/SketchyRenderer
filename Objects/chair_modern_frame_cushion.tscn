@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://f7r1dp0oaj2b"]
+
+[ext_resource type="PackedScene" uid="uid://dinnc7jsm6qkm" path="res://Objects/chairModernFrameCushion.glb" id="1_tgnfa"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_kjybu"]
+
+[node name="chairModernFrameCushion" instance=ExtResource("1_tgnfa")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_kjybu")]
+transform = Transform3D(0.200221, 0, 0, 0, 0.504476, 0, 0, 0, 0.201037, 0.100964, 0.207965, -0.100145)

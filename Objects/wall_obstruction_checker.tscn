@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp3udm21f8fbg"]
+
+[ext_resource type="Script" path="res://Scripts/wall_obstruction_checker.gd" id="1_p1407"]
+[ext_resource type="CylinderMesh" uid="uid://kkyxotljl7k0" path="res://Models/obstruction_check_cone.tres" id="2_madug"]
+
+[node name="WallObstructionChecker" type="Node3D"]
+script = ExtResource("1_p1407")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = ExtResource("2_madug")

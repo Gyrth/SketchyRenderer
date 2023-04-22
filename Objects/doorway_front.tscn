@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdi1lxhgcyxyi"]
+
+[ext_resource type="PackedScene" uid="uid://couec5s68lghq" path="res://Objects/doorwayFront.glb" id="1_p2l5p"]
+[ext_resource type="Material" uid="uid://chivp42kwjv8w" path="res://Materials/white.tres" id="2_sv1hc"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="3_dyxof"]
+
+[node name="doorwayFront" instance=ExtResource("1_p2l5p")]
+
+[node name="door" parent="doorwayFront(Clone)" index="0"]
+surface_material_override/2 = ExtResource("2_sv1hc")
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("3_dyxof")]
+transform = Transform3D(0.49134, 0, 0, 0, 1, 0, 0, 0, 0.0866627, 0.245137, 0.504437, -0.0439911)

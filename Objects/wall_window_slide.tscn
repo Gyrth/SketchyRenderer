@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7vuxpnpyb1yo"]
+
+[ext_resource type="PackedScene" uid="uid://b5ua484c32d5a" path="res://Objects/wallWindowSlide.glb" id="1_wf273"]
+[ext_resource type="Material" uid="uid://chivp42kwjv8w" path="res://Materials/white.tres" id="2_seb8g"]
+
+[node name="wallWindowSlide" instance=ExtResource("1_wf273")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="windowBottom" parent="wallWindowSlide(Clone)" index="0"]
+surface_material_override/0 = ExtResource("2_seb8g")
+
+[node name="windowTop" parent="wallWindowSlide(Clone)" index="1"]
+surface_material_override/0 = ExtResource("2_seb8g")

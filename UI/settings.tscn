@@ -1,0 +1,186 @@
+[gd_scene load_steps=3 format=3 uid="uid://csgssghnj53v4"]
+
+[ext_resource type="Theme" uid="uid://cfpd70cpbjet4" path="res://Themes/settings.tres" id="1_bakoi"]
+[ext_resource type="Script" path="res://Scripts/settings.gd" id="2_4ajr0"]
+
+[node name="Settings" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bakoi")
+script = ExtResource("2_4ajr0")
+
+[node name="MainWindow" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="MainWindow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator" type="ColorRect" parent="MainWindow"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(0, 0, 0, 0.784314)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainWindow"]
+layout_mode = 2
+
+[node name="WindowMode" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="WindowModeLabel" type="Label" parent="MainWindow/VBoxContainer/WindowMode"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Window Mode"
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MainWindow/VBoxContainer/WindowMode"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+icon_alignment = 1
+item_count = 3
+selected = 0
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Borderless"
+popup/item_1/id = 1
+popup/item_2/text = "Fullscreen"
+popup/item_2/id = 2
+
+[node name="ScreenEffect" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScreenEffectLabel" type="Label" parent="MainWindow/VBoxContainer/ScreenEffect"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Screen Effect"
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MainWindow/VBoxContainer/ScreenEffect"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+icon_alignment = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "Sketchy"
+popup/item_0/id = 0
+popup/item_1/text = "Sobol"
+popup/item_1/id = 1
+
+[node name="NoiseOffset" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="NoiseOffsetLabel" type="Label" parent="MainWindow/VBoxContainer/NoiseOffset"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Noise Offset"
+vertical_alignment = 1
+
+[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/NoiseOffset"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 2.0
+step = 0.01
+value = 0.5
+
+[node name="ShadowAmount" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="ShadowAmountLabel" type="Label" parent="MainWindow/VBoxContainer/ShadowAmount"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Shadow Amount"
+vertical_alignment = 1
+
+[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/ShadowAmount"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -0.1
+max_value = 0.5
+step = 0.001
+value = -0.1
+
+[node name="GrainAmount" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="GrainAmountLabel" type="Label" parent="MainWindow/VBoxContainer/GrainAmount"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grain Amount"
+vertical_alignment = 1
+
+[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/GrainAmount"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.001
+value = 0.2
+
+[node name="LineSize" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineSizeLabel" type="Label" parent="MainWindow/VBoxContainer/LineSize"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Line Size"
+vertical_alignment = 1
+
+[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/LineSize"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 2.0
+step = 0.001
+value = 1.0
+
+[node name="TintColor" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="TintColorLabel" type="Label" parent="MainWindow/VBoxContainer/TintColor"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tint Color"
+vertical_alignment = 1
+
+[node name="Color" type="ColorPicker" parent="MainWindow/VBoxContainer/TintColor"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+alignment = 1
+edit_alpha = false
+picker_shape = 1
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+sliders_visible = false
+hex_visible = false
+presets_visible = false
+metadata/_edit_use_anchors_ = true

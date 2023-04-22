@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://d17b3vsxfycdu"]
+
+[ext_resource type="Script" path="res://Scripts/screen_effects.gd" id="1_1oxib"]
+[ext_resource type="Material" uid="uid://cpac0plgmdac5" path="res://Materials/sobel.tres" id="2_p7pxa"]
+[ext_resource type="Material" uid="uid://bf8l1r7fuh305" path="res://Materials/sketchy.tres" id="2_w151j"]
+[ext_resource type="Shader" uid="uid://cn7v5s1kno3ss" path="res://Shaders/screen_vignette.tres" id="4_ctli2"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_706fa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j81ly"]
+shader = ExtResource("4_ctli2")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/vignette_open = 0.0
+
+[node name="ScreenEffects" type="Node3D"]
+script = ExtResource("1_1oxib")
+
+[node name="Sketchy" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, -1.32897e-07, 5.31587e-08, 2.65794e-07, 5, -3.81182e-08, -5.31587e-07, 1.90591e-07, 1, 5.96046e-08, -4.76837e-07, -0.911038)
+mesh = SubResource("QuadMesh_706fa")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("2_w151j")
+
+[node name="Sobel" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, -8.56244e-08, -2.5518e-16, 1.71249e-07, 5, 2.98023e-08, -2.55181e-15, -1.49012e-07, 1, 0, -5.96046e-08, -0.911038)
+visible = false
+mesh = SubResource("QuadMesh_706fa")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("2_p7pxa")
+
+[node name="Vignette" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_j81ly")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

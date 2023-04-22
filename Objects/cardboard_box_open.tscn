@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxwe0kauvu57e"]
+
+[ext_resource type="PackedScene" uid="uid://driwtkdja30s4" path="res://Objects/cardboardBoxOpen.glb" id="1_67m0w"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_eunpg"]
+
+[node name="cardboardBoxOpen" instance=ExtResource("1_67m0w")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_eunpg")]
+transform = Transform3D(0.376431, 0, 0, 0, 1, 0, 0, 0, 0.21508, 0.105951, -0.222102, -0.105894)

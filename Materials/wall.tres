@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c6tts3rpyej50"]
+
+[ext_resource type="Shader" uid="uid://br63un1kutc5q" path="res://Shaders/spatial_vignette.tres" id="1_ja8ti"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ja8ti")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/vignette_open = 0.0

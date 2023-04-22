@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlhmdkiherb5u"]
+
+[ext_resource type="Script" path="res://Scripts/player_camera.gd" id="1_la1kk"]
+[ext_resource type="CylinderMesh" uid="uid://kkyxotljl7k0" path="res://Models/obstruction_check_cone.tres" id="2_8lb6c"]
+
+[node name="PlayerCamera" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0)
+script = ExtResource("1_la1kk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 1.49012e-08, -5.96046e-08, -1.49012e-08, 1, 2.98023e-08, 0, 1.49012e-08, 1, 0, 0, 0)
+visible = false
+mesh = ExtResource("2_8lb6c")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 3)
+size = 4.69343

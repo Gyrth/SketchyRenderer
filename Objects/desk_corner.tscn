@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4pnt5oqnda0i"]
+
+[ext_resource type="PackedScene" uid="uid://u0sl00w2w0eu" path="res://Objects/deskCorner.glb" id="1_3hjvk"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_oc5ne"]
+
+[node name="deskCorner" instance=ExtResource("1_3hjvk")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_oc5ne")]
+transform = Transform3D(0.39244, 0, 0, 0, 0.471693, 0, 0, 0, 1, 0.779367, 0.149008, -0.49966)
+
+[node name="CollisionBox2" parent="." index="2" instance=ExtResource("2_oc5ne")]
+transform = Transform3D(-1.71541e-08, 0, -1, 0, 0.471693, 0, 0.39244, 0, -4.37114e-08, 0.499966, 0.149008, -0.779542)

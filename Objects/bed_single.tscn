@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp31dvh2xuyv5"]
+
+[ext_resource type="PackedScene" uid="uid://cyklyoomsy4hp" path="res://Objects/bedSingle.glb" id="1_lgfn1"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_hfy58"]
+
+[node name="bedSingle" instance=ExtResource("1_lgfn1")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_hfy58")]
+transform = Transform3D(0.57951, 0, 0, 0, 1, 0, 0, 0, 1.12412, 0.665468, -0.123844, -0.560473)

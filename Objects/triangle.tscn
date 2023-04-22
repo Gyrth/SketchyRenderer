@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drmw6fr0p2lki"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_22qxr"]
+
+[node name="Triangle" type="MeshInstance3D"]
+mesh = SubResource("PrismMesh_22qxr")

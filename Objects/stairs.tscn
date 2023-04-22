@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2g55kha3646r"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_cx5e6"]
+
+[node name="Stairs" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -23.5633, -0.152504, -7.60456)
+
+[node name="Box72" parent="." instance=ExtResource("1_cx5e6")]
+transform = Transform3D(0.90088, 0, 5.19028e-08, 0, 1, 0, -5.50197e-08, 0, 2.96686, 0.6537, 0.333418, 0)
+skeleton = NodePath("")
+
+[node name="Box73" parent="." instance=ExtResource("1_cx5e6")]
+transform = Transform3D(0.90088, 0, 5.19028e-08, 0, 1, 0, -5.50197e-08, 0, 2.96686, 0.44189, 0.209918, 0)
+skeleton = NodePath("")
+
+[node name="Box74" parent="." instance=ExtResource("1_cx5e6")]
+transform = Transform3D(0.90088, 0, 5.19028e-08, 0, 1, 0, -5.50197e-08, 0, 2.96686, 0.20628, 0.111389, 0)
+skeleton = NodePath("")
+
+[node name="Box78" parent="." instance=ExtResource("1_cx5e6")]
+transform = Transform3D(0.90088, 0, 5.19028e-08, 0, 1, 0, -5.50197e-08, 0, 2.96686, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box79" parent="." instance=ExtResource("1_cx5e6")]
+transform = Transform3D(0.90088, 0, 5.19028e-08, 0, 1, 0, -5.50197e-08, 0, 2.96686, -0.17694, -0.097559, 0)
+skeleton = NodePath("")
+
+[node name="Box80" parent="." instance=ExtResource("1_cx5e6")]
+transform = Transform3D(0.90088, 0, 5.19028e-08, 0, 1, 0, -5.50197e-08, 0, 2.96686, -0.34618, -0.225091, 0)
+skeleton = NodePath("")

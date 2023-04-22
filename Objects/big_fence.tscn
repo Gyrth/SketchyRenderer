@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://cops3syjtmntk"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_c27js"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_36xae"]
+size = Vector3(1, 1.44175, 0.145647)
+
+[node name="BigFence" type="Node3D"]
+transform = Transform3D(3.4724e-08, -1.50996e-07, -2, 2, -8.74228e-08, 3.4724e-08, -8.74228e-08, -2, 1.50996e-07, -26.6601, 1.31479, -3.62391)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 2.52591e-16, 0, 1, 0, 2.52591e-16, 0, 1, 0, -0.00889969, 0.0196991)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_36xae")
+
+[node name="Box81" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(-4.62946e-09, 0.999996, -1.99511e-09, -0.10591, -4.37111e-08, 1.16882e-08, 6.15718e-09, 1.7362e-08, 0.114912, -0.0388288, -0.685716, 0.0191231)
+skeleton = NodePath("")
+
+[node name="Box92" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(-4.62946e-09, 0.999996, -1.99511e-09, -0.10591, -4.37111e-08, 1.16882e-08, 6.15718e-09, 1.7362e-08, 0.114912, -0.0388287, 0.669411, 0.0191231)
+skeleton = NodePath("")
+
+[node name="Box82" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, -0.383146, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box83" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, -0.195135, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box84" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box85" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, 0.202172, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box86" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, 0.38171, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box87" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, -0.483149, 0, 0.0315018)
+skeleton = NodePath("")
+
+[node name="Box88" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, -0.295137, 0, 0.0315018)
+skeleton = NodePath("")
+
+[node name="Box89" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, -0.100002, 0, 0.0315018)
+skeleton = NodePath("")
+
+[node name="Box90" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, 0.102169, 0, 0.0315018)
+skeleton = NodePath("")
+
+[node name="Box91" parent="." instance=ExtResource("1_c27js")]
+transform = Transform3D(0.10591, -1.42109e-13, -9.1342e-10, 1.73195e-14, 1.29961, 1.58244e-09, -3.49517e-16, -9.81178e-08, 0.02096, 0.281708, 0, 0.0315018)
+skeleton = NodePath("")

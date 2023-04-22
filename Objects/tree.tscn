@@ -1,0 +1,179 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1awevyn5bqla"]
+
+[ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="1_guw4r"]
+[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="2_7dr08"]
+[ext_resource type="PackedScene" uid="uid://cxbc7loouyp5l" path="res://Objects/sphere.tscn" id="2_uoai2"]
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="3_ofdqd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_q6g46"]
+height = 3.83
+radius = 0.811015
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kyg00"]
+height = 2.48849
+radius = 0.289479
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umotf"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3x0np"]
+size = Vector3(0.161311, 0.276699, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8n43f"]
+size = Vector3(0.431836, 0.100122, 1.0956)
+
+[node name="Tree" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.979935, -0.199317, 0, 0.195531, 0.961326, -0.19396, 0.0386595, 0.190069, 0.981009, 0.118839, 1.17379, -0.0436933)
+shape = SubResource("CylinderShape3D_q6g46")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.930041, 0.359358, 0.0767238, -0.165727, 0.596568, -0.785265, -0.327962, 0.717613, 0.614388, -0.533023, 0.143627, -1.16068)
+shape = SubResource("CylinderShape3D_kyg00")
+
+[node name="Cylinder3" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(1.23982, -0.729824, 0.0613342, 0.296693, 3.04978, -0.256303, 0, 0.616147, 1.34129, -0.194136, 2.4665, 0.206898)
+skeleton = NodePath("")
+
+[node name="Cylinder5" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.913246, -0.729824, 0.0344245, 0.218543, 3.04978, -0.143853, 0, 0.616147, 0.752814, -0.37165, 2.35519, 0.575341)
+skeleton = NodePath("")
+
+[node name="Cylinder7" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.663434, -0.38617, 0.0246993, 0.117156, 2.21675, -0.103213, -0.00795029, 0.441251, 0.540137, -0.300641, 2.30414, -0.259708)
+skeleton = NodePath("")
+
+[node name="Cylinder" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.199521, -0.675324, 0.104886, 0.260465, 0.667905, -0.0430867, -0.0618172, 0.634512, 0.156985, 1.12252, -0.0879748, -1.09549)
+skeleton = NodePath("")
+
+[node name="Cylinder11" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.223973, -0.859355, 0.209319, 0.225578, -0.167919, -0.305386, 0.198544, 1.16021, 0.11084, 0.788439, 3.72528, -1.2548)
+skeleton = NodePath("")
+
+[node name="Cylinder18" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.24344, -0.00243733, 0.224086, 0.242153, -0.000444265, -0.326931, 0.207449, 0.00337876, 0.118661, 1.06806, 3.77992, -1.63232)
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_umotf")
+
+[node name="Cylinder22" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.230971, -0.00248702, 0.220439, 0.236533, -0.000527215, -0.32161, 0.215511, 0.00324407, 0.116729, 1.45446, 3.85616, -2.15294)
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_umotf")
+
+[node name="Cylinder12" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.212556, -0.0872914, 0.17505, 0.166892, -0.0520207, -0.225937, 0.0620863, 0.438686, 0.0080386, 1.62491, 3.93519, -2.63315)
+skeleton = NodePath("")
+
+[node name="Cylinder13" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.00688472, -0.540317, 0.0343167, 0.117212, -0.0633924, -0.158681, 0.155369, 0.0717678, 0.11819, 2.13034, 3.89006, -2.36556)
+skeleton = NodePath("")
+
+[node name="Cylinder14" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.00522797, -0.52715, 0.0260587, 0.089006, -0.0618476, -0.120496, 0.117981, 0.0700189, 0.0897488, 2.14345, 3.86193, -2.40713)
+skeleton = NodePath("")
+
+[node name="Cylinder4" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(-0.0234985, 0.589154, 0.374918, 0.549018, 0.874241, -0.0908199, -0.439654, 1.06022, -0.13345, -0.305738, 0.383435, -0.775868)
+skeleton = NodePath("")
+
+[node name="Cylinder9" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(-0.0167266, 0.419369, 0.266873, 0.3908, 0.622299, -0.064647, -0.312953, 0.754681, -0.0949918, -0.210243, 0.30989, -0.851913)
+skeleton = NodePath("")
+
+[node name="Cylinder6" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(1.03499, -0.00867085, 0.0113662, 0.0273074, 0.294498, -0.466328, 0.00256559, 0.363372, 0.37821, 0.283545, 0.0136074, -0.926623)
+skeleton = NodePath("")
+
+[node name="Cylinder10" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(-0.433201, 0.0361846, 0.124313, -0.0816185, 0.103963, -0.573707, -0.0554878, -0.435419, -0.12665, -0.271421, 1.92149, 0.427438)
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_7dr08")
+
+[node name="Cylinder2" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.0815896, -0.890677, -0.159909, 0.0513073, 0.709215, -0.212823, 0.31966, 0.113502, 0.074974, 1.50778, -0.3217, -0.251851)
+skeleton = NodePath("")
+
+[node name="Cylinder8" parent="." instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.0679742, -0.788015, -0.142938, 0.0427453, 0.699383, -0.169139, 0.266316, 0.0888768, 0.0636309, 1.52257, -0.293894, -0.24069)
+skeleton = NodePath("")
+
+[node name="Sphere" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(1.08521, 0, 0, 0, 1.08521, 0, 0, 0, 1.08521, 0.515697, 0.268673, -0.377551)
+
+[node name="Sphere2" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(0.932376, 0, 0, 0, 0.932376, 0, 0, 0, 0.932376, 0.57331, 0.0984818, 0.00522418)
+
+[node name="Sphere17" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(1.01838, 0, 0, 0, 1.01838, 0, 0, 0, 1.01838, -0.0676432, -0.018394, -0.258176)
+
+[node name="Sphere13" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(5.17275, 0, 0, 0, 5.17275, 0, 0, 0, 5.17275, -0.555056, 5.64538, 0.776495)
+
+[node name="Sphere15" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(3.84961, 0, 0, 0, 3.84961, 0, 0, 0, 3.84961, -2.8406, 4.98064, 0.786888)
+
+[node name="Sphere16" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(3.82353, 0, 0, 0, 3.82353, 0, 0, 0, 3.82353, 0.855979, 7.0631, -1.02076)
+
+[node name="Sphere18" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(2.85881, 0, 0, 0, 2.85881, 0, 0, 0, 2.85881, 1.21716, 4.56431, 2.30338)
+
+[node name="Sphere19" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(3.9576, 0, 0, 0, 3.9576, 0, 0, 0, 3.9576, -0.604886, 7.31781, 2.83595)
+
+[node name="Sphere20" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(2.25261, 0, 0, 0, 2.25261, 0, 0, 0, 2.25261, -0.858115, 4.65804, 2.76383)
+
+[node name="Sphere21" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(2.25261, 0, 0, 0, 2.25261, 0, 0, 0, 2.25261, -1.73768, 7.49887, 0.0192312)
+
+[node name="Sphere22" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(2.25261, 0, 0, 0, 2.25261, 0, 0, 0, 2.25261, 0.46763, 5.01584, -0.998606)
+
+[node name="Sphere24" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(0.391734, 0, 0, 0, 0.391734, 0, 0, 0, 0.391734, 1.67638, 3.87252, -2.36971)
+
+[node name="Sphere23" parent="." instance=ExtResource("2_uoai2")]
+transform = Transform3D(2.25261, 0, 0, 0, 2.25261, 0, 0, 0, 2.25261, 1.50736, 5.69971, 0.883178)
+
+[node name="Swing" type="Node3D" parent="."]
+transform = Transform3D(0.799024, 0, -0.601299, 0, 1, 0, 0.601299, 0, 0.799024, 1.23915, 3.82765, -1.91965)
+
+[node name="HingleTop" type="StaticBody3D" parent="Swing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00608993, 0)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Swing/HingleTop"]
+shape = SubResource("BoxShape3D_3x0np")
+
+[node name="Swing" type="RigidBody3D" parent="Swing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.48434, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Swing/Swing"]
+shape = SubResource("BoxShape3D_8n43f")
+
+[node name="Box" parent="Swing/Swing" instance=ExtResource("3_ofdqd")]
+transform = Transform3D(0.335058, 0, 4.17233e-07, 0, 0.0315423, 0, 2.98023e-08, 0, 1.08348, 0, 0, 0)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder15" parent="Swing/Swing/Box" instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.0425442, 0, 0.0330141, 0, 54.4111, 0, -0.00990078, 0, 0.0135665, 0.0648694, 54.0838, 0.289099)
+skeleton = NodePath("")
+
+[node name="Cylinder16" parent="Swing/Swing/Box" instance=ExtResource("1_guw4r")]
+transform = Transform3D(0.0425442, 0, 0.0330141, 0, 54.4111, 0, -0.00990078, 0, 0.0135665, -0.0554171, 53.5597, -0.320257)
+skeleton = NodePath("")
+
+[node name="HingeJoint3D" type="Generic6DOFJoint3D" parent="Swing"]
+transform = Transform3D(-1, 2.62268e-07, 0, -2.62268e-07, -1, 0, 0, 0, 1, -0.000330448, -0.0633564, -0.000189543)
+node_a = NodePath("../HingleTop")
+node_b = NodePath("../Swing")
+angular_limit_x/enabled = false
+angular_limit_z/enabled = false

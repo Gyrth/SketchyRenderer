@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch5nvh881ls1a"]
+
+[ext_resource type="PackedScene" uid="uid://t1gq10glfwjq" path="res://Objects/kitchenBar.glb" id="1_7p5yr"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_kusa4"]
+
+[node name="kitchenBar" instance=ExtResource("1_7p5yr")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_kusa4")]
+transform = Transform3D(0.438542, 0, 0, 0, 0.562902, 0, 0, 0, 0.221388, 0.214624, 0.140421, -0.105899)

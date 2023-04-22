@@ -1,0 +1,281 @@
+[gd_scene load_steps=5 format=3 uid="uid://buhhe3bqjjfv4"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_rv2s5"]
+[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="2_ckdvx"]
+[ext_resource type="PackedScene" uid="uid://drmw6fr0p2lki" path="res://Objects/triangle.tscn" id="3_t2ifv"]
+[ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="4_55wod"]
+
+[node name="FlowerBox" type="Node3D"]
+
+[node name="Box" parent="." instance=ExtResource("1_rv2s5")]
+transform = Transform3D(0.0186416, -0.0819074, 0, 0.0107627, 0.141868, 0, 0, 0, 1, -0.17605, 0, 0)
+
+[node name="Box2" parent="." instance=ExtResource("1_rv2s5")]
+transform = Transform3D(0.0215255, 0, 0, 0, 0.152126, 0, 0, 0, 1, 0.00773239, 0, 0)
+
+[node name="Box4" parent="." instance=ExtResource("1_rv2s5")]
+transform = Transform3D(-7.73844e-10, 0, -0.168757, 0, 0.152764, 0, 0.0177035, 0, -7.37661e-09, -0.0595312, 0, -0.489631)
+
+[node name="Box5" parent="." instance=ExtResource("1_rv2s5")]
+transform = Transform3D(-8.25614e-10, 0, -0.168757, 0, 0.152764, 0, 0.0188879, 0, -7.37661e-09, -0.0600233, 0, 0.49)
+
+[node name="Box3" parent="." instance=ExtResource("1_rv2s5")]
+transform = Transform3D(-9.40908e-10, -0.163815, 0, 0.0215255, -7.16057e-09, 0, 0, 0, 1, -0.0630655, -0.0715477, 0)
+
+[node name="Box6" parent="." instance=ExtResource("1_rv2s5")]
+transform = Transform3D(-9.40908e-10, -0.188965, 0, 0.0215255, -8.25992e-09, 0, 0, 0, 0.969452, -0.0861998, 0.0188757, 0)
+surface_material_override/0 = ExtResource("2_ckdvx")
+
+[node name="Triangle" parent="." instance=ExtResource("3_t2ifv")]
+transform = Transform3D(-0.152955, 1.33718e-08, 0, -1.33718e-08, -0.152955, 0, 0, 0, 0.020931, -0.131655, 0, -0.489302)
+
+[node name="Triangle2" parent="." instance=ExtResource("3_t2ifv")]
+transform = Transform3D(-0.152955, 1.33718e-08, 0, -1.33718e-08, -0.152955, 0, 0, 0, 0.020931, -0.132, 0, 0.489)
+
+[node name="Flower" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.00729271, -0.028225, -0.00339771, 0.00279478, 0.0878858, 0, 0.00320613, -0.0124087, 0.00772847, -0.0942269, 0.0634201, -0.424701)
+
+[node name="Cylinder2" parent="Flower" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")
+
+[node name="Flower2" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.00811114, -0.049678, -0.00375255, 0.00401837, 0.098582, -0.00203741, 0.00426752, 0.00159465, 0.0090508, -0.137077, 0.0685607, -0.320826)
+
+[node name="Cylinder2" parent="Flower2" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower2/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower2/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower2/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower2/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower2/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower2/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")
+
+[node name="Flower3" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.00575049, -0.047994, -0.00301872, 0.00385494, 0.0716497, -0.0020163, 0.00363017, -5.96385e-05, 0.00692306, -0.112792, 0.0556169, -0.195346)
+
+[node name="Cylinder2" parent="Flower3" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower3/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower3/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower3/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower3/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower3/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower3/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")
+
+[node name="Flower4" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.00774131, -0.0508552, -0.0028918, 0.00287211, 0.0853027, -0.00463721, 0.00462206, 0.0321691, 0.0077249, -0.115726, 0.0621786, -0.0541317)
+
+[node name="Cylinder2" parent="Flower4" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower4/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower4/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower4/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower4/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower4/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower4/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")
+
+[node name="Flower5" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.0089014, -0.0449785, -0.00407994, 0.00339523, 0.107772, -0.00235452, 0.0046627, 0.00739122, 0.00950335, -0.13936, 0.0729774, 0.0668045)
+
+[node name="Cylinder2" parent="Flower5" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower5/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower5/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower5/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower5/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower5/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower5/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")
+
+[node name="Flower6" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.00580535, -0.0386422, -0.00291811, 0.0035953, 0.0708549, -0.000556765, 0.00280325, -0.0108494, 0.0067573, -0.0936707, 0.055235, 0.190165)
+
+[node name="Cylinder2" parent="Flower6" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower6/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower6/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower6/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower6/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower6/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower6/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")
+
+[node name="Flower7" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.00802798, -0.062699, -0.00415753, 0.00575665, 0.0984946, -0.00108877, 0.0040554, -0.0156956, 0.00977565, -0.118445, 0.0685187, 0.298236)
+
+[node name="Cylinder2" parent="Flower7" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower7/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower7/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower7/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower7/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower7/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower7/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")
+
+[node name="Flower8" parent="." instance=ExtResource("4_55wod")]
+transform = Transform3D(0.00826257, -0.048848, -0.00407212, 0.0024821, 0.0972085, -0.00454479, 0.00547967, 0.0296237, 0.00819881, -0.123739, 0.0679006, 0.446674)
+
+[node name="Cylinder2" parent="Flower8" instance=ExtResource("4_55wod")]
+transform = Transform3D(2.52815, -2.79397e-08, -3.57628e-07, 1.02445e-08, 0.0181021, 1.86265e-09, 0, 7.45058e-09, 2.52815, 0, 0.993437, 0)
+skeleton = NodePath("../..")
+
+[node name="Cylinder3" parent="Flower8/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, -1.2)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder4" parent="Flower8/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(1.31099, 0, 0, 0, 0.653616, 0, 0, 0, 1.82757, 0, 0, 1.20049)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder5" parent="Flower8/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, -1.03944, 0, -0.599876)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder6" parent="Flower8/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(0.655495, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, 0.913786, 1.03941, 0, 0.60037)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder7" parent="Flower8/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, -1.03946, 0, 0.600348)
+skeleton = NodePath("../../..")
+
+[node name="Cylinder8" parent="Flower8/Cylinder2" instance=ExtResource("4_55wod")]
+transform = Transform3D(-0.655496, 0, 1.58272, 0, 0.653616, 0, -1.13535, 0, -0.913787, 1.0394, 0, -0.599859)
+skeleton = NodePath("../../..")

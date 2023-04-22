@@ -1,0 +1,24 @@
+[gd_resource type="Shader" format=3 uid="uid://cn7v5s1kno3ss"]
+
+[resource]
+code = "shader_type canvas_item;
+
+render_mode blend_mix;
+
+uniform vec4 color : source_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform float vignette_open : hint_range(0.0, 1.0, 0.0001) = 0.0;
+
+float vignette(vec2 uv){
+	uv *= 1.0 - uv.xy;
+	float vignette = uv.x * uv.y * 8.0;
+	return pow(vignette, 1.0 - vignette_open);
+}
+
+void fragment(){
+	COLOR = color;
+	// Skip trying to get the vignette value when the vignette is all the way open to save on performance.
+	if(vignette_open > 0.0 && 1.0 - vignette(SCREEN_UV) < 0.5){
+		discard;
+	}
+}
+"

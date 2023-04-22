@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://mao1r8vokrko"]
+
+[ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="1_w1vfr"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_31wpj"]
+size = Vector3(1, 0.514, 0.001)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cs63u"]
+
+[node name="Parasol" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8621, 1.43879, -3.81571)
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965927, 0, -0.965926, 0.258819, 0.00201988, 0.476003, 0.245434)
+mesh = SubResource("PrismMesh_31wpj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 8.4444e-08, -2.26267e-08, 0, 0.258819, 0.965927, 8.74229e-08, 0.965926, -0.258819, 0.00586891, 0.476003, -0.244879)
+mesh = SubResource("PrismMesh_31wpj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31134e-07, 0.965926, -0.258819, 8.88181e-16, 0.258819, 0.965927, 1, -1.26666e-07, 3.394e-08, -0.240053, 0.476003, 0.000554085)
+mesh = SubResource("PrismMesh_31wpj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -0.965926, 0.258819, 0, 0.258819, 0.965927, -1, 4.2222e-08, -1.13134e-08, 0.247948, 0.476003, 0)
+mesh = SubResource("PrismMesh_31wpj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0174399, 0, 0, 0, 0.549828, 0, 0, 0, 0.0174399, 0, 0, 0)
+mesh = SubResource("CylinderMesh_cs63u")
+skeleton = NodePath("../..")
+
+[node name="Cylinder" parent="." instance=ExtResource("1_w1vfr")]
+transform = Transform3D(0.215368, 0, 0, 0, 0.0336524, 0, 0, 0, 0.215368, 0, -0.0397264, 0)
+
+[node name="Cylinder2" parent="." instance=ExtResource("1_w1vfr")]
+transform = Transform3D(0.0531154, 0, 0, 0, 0.0167314, 0, 0, 0, 0.0531154, 0, -0.00141525, 0)

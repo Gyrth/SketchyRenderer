@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bp0a38f7wvabo"]
+
+[ext_resource type="Shader" uid="uid://4acw3ntwxlq" path="res://Shaders/sea.tres" id="1_qf81s"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qf81s")
+shader_parameter/albedo = Color(0.001, 0.001, 0.001, 1)
+shader_parameter/uv1_scale = Vector3(0.05, 0.1, 0.05)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv1_blend_sharpness = null

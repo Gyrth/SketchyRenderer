@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj54bw3ehx1x1"]
+
+[ext_resource type="PackedScene" uid="uid://7w504xc0q3pt" path="res://Objects/kitchenBlender.glb" id="1_2jxbt"]
+[ext_resource type="Material" uid="uid://chivp42kwjv8w" path="res://Materials/white.tres" id="2_dcsx6"]
+
+[node name="kitchenBlender" instance=ExtResource("1_2jxbt")]
+
+[node name="blenderCup" parent="kitchenBlender(Clone)" index="0"]
+surface_material_override/0 = ExtResource("2_dcsx6")

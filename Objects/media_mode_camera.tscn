@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://4l6hkbgeey2v"]
+
+[ext_resource type="Script" path="res://Scripts/flying_camera.gd" id="1_4ceof"]
+
+[node name="MediaModeCamera" type="Camera3D"]
+current = true
+script = ExtResource("1_4ceof")
+
+[node name="ObstructionCheckCenter" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)

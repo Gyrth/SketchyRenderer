@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5n41nwvemoex"]
+
+[ext_resource type="Material" uid="uid://c6tts3rpyej50" path="res://Materials/wall.tres" id="1_dmc4n"]
+[ext_resource type="Script" path="res://Scripts/wall.gd" id="1_vtsi3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h8q2a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhej6"]
+
+[node name="Wall" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_h8q2a")
+surface_material_override/0 = ExtResource("1_dmc4n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 16
+script = ExtResource("1_vtsi3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_vhej6")

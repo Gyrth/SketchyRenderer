@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://fo5du0vq3q4c"]
+
+[ext_resource type="PackedScene" uid="uid://uprrieubhmhq" path="res://Objects/lampSquareFloor.glb" id="1_e0yxb"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_pyjlo"]
+
+[node name="lampSquareFloor" instance=ExtResource("1_e0yxb")]
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_pyjlo")]
+transform = Transform3D(0.126772, 0, 0, 0, 1, 0, 0, 0, 0.130661, 0.0598039, 0.36645, -0.0594177)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcg7qj1bpb6cl"]
+
+[ext_resource type="PackedScene" uid="uid://c7kxy4cvoch1r" path="res://Objects/trashcan.glb" id="1_sb2od"]
+[ext_resource type="PackedScene" uid="uid://cmpt2ndnioqaf" path="res://Objects/collision_cylinder.tscn" id="2_7arnq"]
+
+[node name="trashcan" instance=ExtResource("1_sb2od")]
+
+[node name="CollisionCylinder" parent="." index="1" instance=ExtResource("2_7arnq")]
+transform = Transform3D(0.212331, 0, 0, 0, 0.212331, 0, 0, 0, 0.212331, 0, 0.195984, 0)

@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://xujasdlxlfga"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_2xq4u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6g538"]
+size = Vector3(0.489492, 0.482301, 1.01959)
+
+[node name="Table" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.63377, 0.446345, -0.103401)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.217486, 0)
+shape = SubResource("BoxShape3D_6g538")
+
+[node name="Box41" parent="." instance=ExtResource("1_2xq4u")]
+transform = Transform3D(0.0700685, 0, 0, 0, 0.459103, 0, 0, 0, 0.0636578, -0.19734, -0.23453, 0.463003)
+skeleton = NodePath("")
+
+[node name="Box42" parent="." instance=ExtResource("1_2xq4u")]
+transform = Transform3D(0.0700685, 0, 0, 0, 0.459103, 0, 0, 0, 0.0636578, -0.19734, -0.23453, -0.461404)
+skeleton = NodePath("")
+
+[node name="Box43" parent="." instance=ExtResource("1_2xq4u")]
+transform = Transform3D(0.0700685, 0, 0, 0, 0.459103, 0, 0, 0, 0.0636578, 0.18503, -0.23453, 0.463003)
+skeleton = NodePath("")
+
+[node name="Box44" parent="." instance=ExtResource("1_2xq4u")]
+transform = Transform3D(0.0700685, 0, 0, 0, 0.459103, 0, 0, 0, 0.0636578, 0.18503, -0.23453, -0.461404)
+skeleton = NodePath("")
+
+[node name="Box40" parent="." instance=ExtResource("1_2xq4u")]
+transform = Transform3D(0.488654, 0, 0, 0, 0.0443539, 0, 0, 0, 1.01723, 0, 0, 0)
+skeleton = NodePath("")

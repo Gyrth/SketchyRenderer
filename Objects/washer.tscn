@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://daaoflvhmnrnk"]
+
+[ext_resource type="PackedScene" uid="uid://ceoxf6sv7pi2d" path="res://Objects/washer.glb" id="1_74jtk"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="2_3axki"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="2_x1l47"]
+
+[node name="washer" instance=ExtResource("1_74jtk")]
+
+[node name="washerDoor" parent="washer(Clone)" index="0"]
+surface_material_override/1 = ExtResource("2_3axki")
+
+[node name="CollisionBox" parent="." index="1" instance=ExtResource("2_x1l47")]
+transform = Transform3D(0.396632, 0, 0, 0, 0.520809, 0, 0, 0, 0.384628, 0.196439, 0.211482, -0.18317)

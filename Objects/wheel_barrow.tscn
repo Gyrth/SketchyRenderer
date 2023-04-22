@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://da6scbgcq32n1"]
+
+[ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="1_xqlfd"]
+[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="2_fxkf5"]
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="3_7yy0y"]
+[ext_resource type="PackedScene" uid="uid://drmw6fr0p2lki" path="res://Objects/triangle.tscn" id="4_quhss"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fevxm"]
+size = Vector3(0.55124, 0.336842, 0.213214)
+
+[node name="WheelBarrow" type="Node3D"]
+transform = Transform3D(-1.53687, 0.26795, -1.25149, 0.343514, 1.97028, 0, 1.2329, -0.214953, -1.56005, -9.64384, 0, 3.76441)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 7.45058e-09, 0, -7.45058e-09, 1, 2.98023e-08, -1.19209e-07, 7.45058e-09, 1, -0.215655, 0.169122, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 2.23517e-08, 2.98023e-08, 7.45058e-09, 1, 1.49012e-08, 2.98023e-08, -5.21541e-08, 1, 0.068903, 2.38419e-07, 1.19209e-07)
+shape = SubResource("BoxShape3D_fevxm")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.41269, 2.23517e-08, 5.96046e-08, 0, 1, 4.47035e-08, 2.98023e-08, -5.21541e-08, 1.51236, -0.321283, 2.38419e-07, 2.38419e-07)
+shape = SubResource("BoxShape3D_fevxm")
+
+[node name="Cylinder" parent="." instance=ExtResource("1_xqlfd")]
+transform = Transform3D(0.193863, 0, 0, 0, -1.26242e-09, -0.193863, 0, 0.0288808, -8.47403e-09, 0, 0.0914745, 0)
+surface_material_override/0 = ExtResource("2_fxkf5")
+
+[node name="Cylinder2" parent="Cylinder" instance=ExtResource("1_xqlfd")]
+transform = Transform3D(0.547012, 0, 0, 0, 1.01602, 1.42109e-14, 0, 4.44089e-16, 0.59749, 0, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="Box" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.303742, 0, 0, 0, 0.00968833, 0, 0, 0, 0.196177, -0.25516, 0.172119, 0)
+
+[node name="Box10" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.303742, 0, 0, 0, 0.0990698, 0, 0, 0, 0.00907568, -0.25516, 0.220726, -0.0935011)
+
+[node name="Box2" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.161026, -0.00484417, 0, 0.0929684, 0.00839034, 0, 0, 0, 0.196177, -0.0261564, 0.218176, 0)
+
+[node name="Box3" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(-0.02721, -0.00935821, 0, 0.101549, -0.00250752, 0, 0, 0, 0.196177, -0.415102, 0.217759, 0)
+
+[node name="Box4" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.0071423, 0, 0, 0, 0.00968833, 0, 0, 0, 0.107228, 0.123729, 0.156734, 0)
+
+[node name="Box5" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.00184856, 0, -0.214151, 0, 0.00968833, 0, 0.00689893, 0, 0.0573816, 0.0183544, 0.156734, 0.0792656)
+
+[node name="Box14" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.00184856, 0, 0.214151, 0, 0.00968833, 0, -0.00689893, 0, 0.0573816, 0.018, 0.157, -0.079)
+
+[node name="Box12" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(2.46954e-10, 0.00685069, -0.0548397, -2.46954e-10, 0.00685069, 0.0548397, 0.0071423, 0, 2.6063e-09, -0.0088501, 0.183939, 0.0792656)
+
+[node name="Box13" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(2.92275e-10, 0.00685069, -0.0548397, -2.46954e-10, 0.00685069, 0.0548397, 0.0071423, -4.34699e-11, 4.14029e-09, -0.009, 0.184, -0.079)
+
+[node name="Box6" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(1.16415e-10, -0.00484417, -0.192003, 0, 0.00839034, -0.110853, 0.0071423, 7.89571e-11, 6.96644e-09, -0.180651, 0.102817, 0.107756)
+
+[node name="Box15" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(1.16415e-10, -0.00484417, -0.192003, 0, 0.00839034, -0.110853, 0.0071423, 7.89571e-11, 6.96644e-09, -0.181, 0.103, -0.108)
+
+[node name="Box7" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(3.01305e-11, 0.00685068, -0.156769, -1.12449e-10, 0.00685068, 0.156769, 0.0071423, 7.89571e-11, 6.96644e-09, -0.349069, 0.124574, 0.107756)
+
+[node name="Box16" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(3.01305e-11, 0.00685068, -0.156769, -1.12449e-10, 0.00685068, 0.156769, 0.0071423, 7.89571e-11, 6.96644e-09, -0.349, 0.125, -0.108)
+
+[node name="Box8" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.00184856, 0.0046791, -0.165004, -1.12449e-10, 0.00839034, 0.0986255, 0.00689893, -0.00125376, 0.0442126, -0.507639, 0.250491, 0.130076)
+
+[node name="Box17" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(-0.00184856, 0.0046791, -0.165004, -1.60159e-10, 0.00839034, 0.0986255, 0.00689893, 0.00125376, -0.0442126, -0.508, 0.25, -0.13)
+
+[node name="Box9" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(-0.00010225, 0.00435701, -0.064555, 0.000804059, 0.0156553, 0.0178529, 0.0119758, -0.00101391, -0.00174982, -0.616158, 0.304649, 0.149855)
+
+[node name="Box18" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(-0.00010225, 0.00435701, -0.064555, 0.000804059, 0.0156553, 0.0178529, 0.0119758, -0.00101391, -0.00174982, -0.616, 0.305, -0.15)
+
+[node name="Triangle" parent="." instance=ExtResource("4_quhss")]
+transform = Transform3D(0.0270548, 0.169381, 0, -0.0975698, 0.046967, 0, 0, 0, 0.00919327, -0.0326262, 0.245478, -0.0934262)
+
+[node name="Triangle2" parent="." instance=ExtResource("4_quhss")]
+transform = Transform3D(-0.0590084, -8.96807e-09, 0, 5.15868e-09, -0.102583, 0, 0, 0, 0.00919327, -0.404002, 0.219009, -0.0934262)
+
+[node name="Box11" parent="." instance=ExtResource("3_7yy0y")]
+transform = Transform3D(0.303742, 0, 0, 0, 0.0990698, 0, 0, 0, 0.00907568, -0.25516, 0.220726, 0.0935509)
+
+[node name="Triangle3" parent="." instance=ExtResource("4_quhss")]
+transform = Transform3D(0.0270548, 0.169381, 0, -0.0975698, 0.046967, 0, 0, 0, 0.00919327, -0.0326262, 0.245478, 0.0936258)
+
+[node name="Triangle4" parent="." instance=ExtResource("4_quhss")]
+transform = Transform3D(-0.0590084, -8.96807e-09, 0, 5.15868e-09, -0.102583, 0, 0, 0, 0.00919327, -0.404002, 0.219009, 0.0936258)

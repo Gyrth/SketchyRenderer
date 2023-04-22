@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk5rlycd0vq4t"]
+
+[ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_0qp7t"]
+[ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="2_mvyeo"]
+[ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="3_w2f7s"]
+
+[node name="GardenTable" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8679, 1.22072, -1.63964)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1.58472, 0, 0, 0, 1, 0, -0.677788, 0)
+
+[node name="Box82" parent="Node3D" instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.00384243, -0.0275947, 0.131375, -0.00543402, -1.17703e-09, 0.185792, -0.00384243, -0.0275947, -0.131375, 0.21093, -0.222677, -0.457977)
+skeleton = NodePath("")
+
+[node name="Box83" parent="Node3D" instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.00384243, 0.0275947, 0.131375, -0.00543402, -1.99942e-09, 0.185792, 0.00384243, -0.0275947, 0.131375, 0.211, -0.222899, 0.458)
+skeleton = NodePath("")
+
+[node name="Box84" parent="Node3D" instance=ExtResource("1_0qp7t")]
+transform = Transform3D(-0.00384243, 0.0275947, -0.131375, -0.00543402, 1.29012e-09, 0.185792, 0.00384243, 0.0275947, 0.131375, -0.211, -0.222899, 0.458)
+skeleton = NodePath("")
+
+[node name="Box85" parent="Node3D" instance=ExtResource("1_0qp7t")]
+transform = Transform3D(-0.00384243, -0.0275947, -0.131375, -0.00543402, 2.93489e-09, 0.185792, -0.00384243, 0.0275947, -0.131375, -0.211, -0.222899, -0.458)
+skeleton = NodePath("")
+
+[node name="Box78" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.00384243, -0.0275947, 0.131375, -0.00543402, -1.17703e-09, 0.185792, -0.00384243, -0.0275947, -0.131375, 0.21093, -0.091778, -0.457977)
+skeleton = NodePath("")
+
+[node name="Box79" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.00384243, 0.0275947, 0.131375, -0.00543402, -1.99942e-09, 0.185792, 0.00384243, -0.0275947, 0.131375, 0.211, -0.092, 0.458)
+skeleton = NodePath("")
+
+[node name="Box80" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(-0.00384243, 0.0275947, -0.131375, -0.00543402, 1.29012e-09, 0.185792, 0.00384243, 0.0275947, 0.131375, -0.211, -0.092, 0.458)
+skeleton = NodePath("")
+
+[node name="Box81" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(-0.00384243, -0.0275947, -0.131375, -0.00543402, 2.93489e-09, 0.185792, -0.00384243, 0.0275947, -0.131375, -0.211, -0.092, -0.458)
+skeleton = NodePath("")
+
+[node name="Cylinder" parent="." instance=ExtResource("2_mvyeo")]
+transform = Transform3D(0.335161, 0, 0, 0, 0.0099054, 0, 0, 0, 0.33705, 0.124865, 0, -0.633499)
+skeleton = NodePath("../Box")
+
+[node name="Cylinder2" parent="." instance=ExtResource("2_mvyeo")]
+transform = Transform3D(0.335161, 0, 0, 0, 0.0099054, 0, 0, 0, 0.33705, -0.125196, 0, -0.633499)
+skeleton = NodePath("../Box")
+
+[node name="Box" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.584923, 0, 0, 0, 0.0198108, 0, 0, 0, 1.26236, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="Box7" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.306351, 0, 0, 0, 0.0198108, 0, 0, 0, 0.00664033, 0, -0.180258, 0.398662)
+skeleton = NodePath("")
+
+[node name="Box8" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.306351, 0, 0, 0, 0.0198108, 0, 0, 0, 0.00664033, 0, -0.180258, -0.39861)
+skeleton = NodePath("")
+
+[node name="Box5" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.00456911, 0, 0, 0, 0.0198108, 0, 0, 0, 0.802031, 0.152634, -0.180258, 0)
+skeleton = NodePath("")
+
+[node name="Box6" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.00456911, 0, 0, 0, 0.0198108, 0, 0, 0, 0.802031, -0.152563, -0.180258, 0)
+skeleton = NodePath("")
+
+[node name="Box2" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(0.270942, 0, 0, 0, 0.0198108, 0, 0, 0, 0.736283, 0, 0, -0.433561)
+skeleton = NodePath("")
+
+[node name="Cylinder3" parent="." instance=ExtResource("2_mvyeo")]
+transform = Transform3D(-0.335161, 0, -2.94659e-08, 0, 0.0099054, 0, 2.93007e-08, 0, -0.33705, -0.125086, 0, 0.629691)
+skeleton = NodePath("../Box")
+
+[node name="Cylinder4" parent="." instance=ExtResource("2_mvyeo")]
+transform = Transform3D(-0.335161, 0, -2.94659e-08, 0, 0.0099054, 0, 2.93007e-08, 0, -0.33705, 0.124975, 0, 0.629691)
+skeleton = NodePath("../Box")
+
+[node name="Box3" parent="." instance=ExtResource("1_0qp7t")]
+transform = Transform3D(-0.270942, 0, -6.43679e-08, 0, 0.0198108, 0, 2.36865e-08, 0, -0.736283, -0.000221252, 0, 0.429441)
+skeleton = NodePath("")
+
+[node name="CollisionBox" parent="." instance=ExtResource("3_w2f7s")]
+transform = Transform3D(0.591013, 0, 0, 0, 1, 0, 0, 0, 1.60913, 0, 0, 0)
