@@ -20,6 +20,14 @@
 * Collecting items in the level and animating both the item and character when doing so.
 * Debug/Media Mode camera that can be enabled at any time to record videos or inspect scenes.
 
+## Credits
+
+This project uses assets made by Kenney that are released under Creative Commons CC0.  
+[View all the assets made by Kenney here.](https://www.kenney.nl/)
+
+For audio effects the project uses assets from Sonniss' GDC Game Audio Bundle.  
+[Sonniss.com](https://sonniss.com/)
+
 ## Videos
 
 ![Video 1](Images/obstruction_checker.gif)
