@@ -2,9 +2,9 @@ extends Node3D
 
 @onready var vignette : ColorRect = $Vignette
 @onready var sketchy_mesh : MeshInstance3D = $Sketchy
-@onready var sobol_mesh : MeshInstance3D = $Sobel
+@onready var sobel_mesh : MeshInstance3D = $Sobel
 @onready var sketchy_material : ShaderMaterial = sketchy_mesh.get_surface_override_material(0)
-@onready var sobol_material : ShaderMaterial = sobol_mesh.get_surface_override_material(0)
+@onready var sobel_material : ShaderMaterial = sobel_mesh.get_surface_override_material(0)
 
 var tween : Tween = null
 
@@ -53,23 +53,31 @@ func SettingsChanged(parameters : Dictionary) -> void:
 	if parameters.setting == "noise_offset":
 		# Get the value out of the Dictionary and apply it to the material that's shown on screen.
 		sketchy_material.set_shader_parameter("noise_offset_multiplier", parameters.value)
-		sobol_material.set_shader_parameter("noise_offset_multiplier", parameters.value)
-	elif parameters.setting == "shadow_amount":
-		sketchy_material.set_shader_parameter("black_shadow_amount", parameters.value)
-		sobol_material.set_shader_parameter("black_shadow_amount", parameters.value)
+		sobel_material.set_shader_parameter("noise_offset_multiplier", parameters.value)
+	elif parameters.setting == "black_threshold":
+		sketchy_material.set_shader_parameter("black_threshold", parameters.value)
+		sobel_material.set_shader_parameter("black_threshold", parameters.value)
+	elif parameters.setting == "white_threshold":
+		sketchy_material.set_shader_parameter("white_threshold", parameters.value)
+		sobel_material.set_shader_parameter("white_threshold", parameters.value)
 	elif parameters.setting == "grain_amount":
 		sketchy_material.set_shader_parameter("grain_amount", parameters.value)
-		sobol_material.set_shader_parameter("grain_amount", parameters.value)
+		sobel_material.set_shader_parameter("grain_amount", parameters.value)
 	elif parameters.setting == "line_size":
 		sketchy_material.set_shader_parameter("line_size", parameters.value)
-		sobol_material.set_shader_parameter("line_size", parameters.value)
+		sobel_material.set_shader_parameter("line_size", parameters.value)
+	elif parameters.setting == "color_passthrough":
+		sketchy_material.set_shader_parameter("color_passthrough", parameters.value)
+		sobel_material.set_shader_parameter("color_passthrough", parameters.value)
+	elif parameters.setting == "depth_check":
+		sketchy_material.set_shader_parameter("depth_check", parameters.value)
+		sobel_material.set_shader_parameter("depth_check", parameters.value)
+	elif parameters.setting == "normal_check":
+		sketchy_material.set_shader_parameter("normal_check", parameters.value)
+		sobel_material.set_shader_parameter("normal_check", parameters.value)
 	elif parameters.setting == "tint_color":
 		sketchy_material.set_shader_parameter("tint_color", parameters.color)
-		sobol_material.set_shader_parameter("tint_color", parameters.color)
+		sobel_material.set_shader_parameter("tint_color", parameters.color)
 	elif parameters.setting == "screen_effect":
-		if parameters.value == 0:
-			sketchy_mesh.visible = true
-			sobol_mesh.visible = false
-		elif parameters.value == 1:
-			sobol_mesh.visible = true
-			sketchy_mesh.visible = false
+		sketchy_mesh.visible = true if parameters.value == 0 else false
+		sobel_mesh.visible = true if parameters.value == 1 else false

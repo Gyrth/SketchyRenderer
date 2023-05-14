@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=3 uid="uid://csb44qve8kbjj"]
+[gd_scene load_steps=124 format=3 uid="uid://csb44qve8kbjj"]
 
 [ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_6i3ch"]
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_hnn12"]
@@ -88,7 +88,6 @@
 [ext_resource type="PackedScene" uid="uid://binqjygl7hnte" path="res://Objects/seesaw.tscn" id="85_agx2f"]
 [ext_resource type="PackedScene" uid="uid://dcg7qj1bpb6cl" path="res://Objects/trashcan.tscn" id="86_gtw6g"]
 [ext_resource type="PackedScene" uid="uid://cf2hkdl0fii2t" path="res://Objects/fountain.tscn" id="87_311u3"]
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="87_m7lgu"]
 [ext_resource type="PackedScene" uid="uid://cddbq5beqmn5x" path="res://Objects/bookcase_closed_doors.tscn" id="89_myxmt"]
 [ext_resource type="PackedScene" uid="uid://3ca5gr7erdbx" path="res://Objects/collision_box.tscn" id="90_m4cy2"]
 [ext_resource type="PackedScene" uid="uid://cmpt2ndnioqaf" path="res://Objects/collision_cylinder.tscn" id="91_8jp3d"]
@@ -103,6 +102,11 @@
 [ext_resource type="PackedScene" uid="uid://bs5qwjl3v2ahp" path="res://Objects/controls_explanation.tscn" id="101_wkmmj"]
 
 [sub_resource type="Environment" id="Environment_qqedq"]
+background_mode = 1
+background_color = Color(1, 1, 1, 1)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.99
 ssr_max_steps = 500
 ssr_fade_in = 1e-05
 ssr_fade_out = 1.31951e-05
@@ -562,7 +566,7 @@ skeleton = NodePath("")
 [node name="Box5" parent="." instance=ExtResource("1_6i3ch")]
 transform = Transform3D(1.1429, 0.930452, 0, -0.906436, 1.17318, 0, 0, 0, 4.96254, -21.9744, -0.244027, -3.1438)
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("87_m7lgu")
+surface_material_override/0 = ExtResource("16_2fj15")
 
 [node name="Box92" parent="." instance=ExtResource("1_6i3ch")]
 transform = Transform3D(-4.99577e-08, -4.06713e-08, 2.11462, -0.906436, 1.17318, 0, -1.1429, -0.930452, -9.24331e-08, -26.1046, -0.244028, -7.30368)

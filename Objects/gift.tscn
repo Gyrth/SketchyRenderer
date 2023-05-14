@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://ce66xanegg61c" path="res://Objects/gift.glb" id="1_1drmb"]
 [ext_resource type="Script" path="res://Scripts/gift.gd" id="1_7xucg"]
 [ext_resource type="Material" uid="uid://chivp42kwjv8w" path="res://Materials/white.tres" id="2_nn4q5"]
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="3_3smdd"]
 [ext_resource type="AudioStream" uid="uid://8tl7n4j3ptjm" path="res://Sounds/phaseJump1.ogg" id="4_2l7bt"]
 [ext_resource type="AudioStream" uid="uid://su8wgvn3l44e" path="res://Sounds/phaseJump2.ogg" id="5_ofcor"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="5_vawt7"]
 [ext_resource type="AudioStream" uid="uid://bfuwqtte2ra73" path="res://Sounds/phaseJump3.ogg" id="6_1uamp"]
 [ext_resource type="AudioStream" uid="uid://dat26fxpgtbf8" path="res://Sounds/powerUp8.ogg" id="7_oavk7"]
 [ext_resource type="AudioStream" uid="uid://blehv8uooctu1" path="res://Sounds/powerUp3.ogg" id="8_wshyn"]
@@ -369,10 +369,9 @@ collision_use_scale = true
 [sub_resource type="QuadMesh" id="QuadMesh_k68ai"]
 size = Vector2(0.3, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ned1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqnyv"]
 shading_mode = 0
-albedo_color = Color(0, 1, 0, 1)
-billboard_mode = 2
+billboard_mode = 1
 billboard_keep_scale = true
 
 [sub_resource type="TextMesh" id="TextMesh_nwy23"]
@@ -408,11 +407,11 @@ libraries = {
 [node name="gift" parent="." instance=ExtResource("1_1drmb")]
 
 [node name="present" parent="gift/tmpParent" index="0"]
-surface_material_override/0 = ExtResource("3_3smdd")
+surface_material_override/0 = ExtResource("5_vawt7")
 surface_material_override/1 = ExtResource("2_nn4q5")
 
 [node name="lid" parent="gift/tmpParent/present" index="0"]
-surface_material_override/0 = ExtResource("3_3smdd")
+surface_material_override/0 = ExtResource("5_vawt7")
 surface_material_override/1 = ExtResource("2_nn4q5")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
@@ -451,7 +450,7 @@ stream = ExtResource("8_wshyn")
 
 [node name="CollectedText" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.816, 0)
-material_override = SubResource("StandardMaterial3D_4ned1")
+material_override = SubResource("StandardMaterial3D_pqnyv")
 cast_shadow = 0
 mesh = SubResource("TextMesh_nwy23")
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://da6scbgcq32n1"]
 
 [ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="1_xqlfd"]
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="2_fxkf5"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="2_q056n"]
 [ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="3_7yy0y"]
 [ext_resource type="PackedScene" uid="uid://drmw6fr0p2lki" path="res://Objects/triangle.tscn" id="4_quhss"]
 
@@ -24,7 +24,7 @@ shape = SubResource("BoxShape3D_fevxm")
 
 [node name="Cylinder" parent="." instance=ExtResource("1_xqlfd")]
 transform = Transform3D(0.193863, 0, 0, 0, -1.26242e-09, -0.193863, 0, 0.0288808, -8.47403e-09, 0, 0.0914745, 0)
-surface_material_override/0 = ExtResource("2_fxkf5")
+surface_material_override/0 = ExtResource("2_q056n")
 
 [node name="Cylinder2" parent="Cylinder" instance=ExtResource("1_xqlfd")]
 transform = Transform3D(0.547012, 0, 0, 0, 1.01602, 1.42109e-14, 0, 4.44089e-16, 0.59749, 0, 0, 0)

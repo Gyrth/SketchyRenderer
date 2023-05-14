@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://buhhe3bqjjfv4"]
 
 [ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_rv2s5"]
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="2_ckdvx"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="2_m5tmw"]
 [ext_resource type="PackedScene" uid="uid://drmw6fr0p2lki" path="res://Objects/triangle.tscn" id="3_t2ifv"]
 [ext_resource type="PackedScene" uid="uid://c3fkkkflcmjit" path="res://Objects/cylinder.tscn" id="4_55wod"]
 
@@ -24,7 +24,7 @@ transform = Transform3D(-9.40908e-10, -0.163815, 0, 0.0215255, -7.16057e-09, 0, 
 
 [node name="Box6" parent="." instance=ExtResource("1_rv2s5")]
 transform = Transform3D(-9.40908e-10, -0.188965, 0, 0.0215255, -8.25992e-09, 0, 0, 0, 0.969452, -0.0861998, 0.0188757, 0)
-surface_material_override/0 = ExtResource("2_ckdvx")
+surface_material_override/0 = ExtResource("2_m5tmw")
 
 [node name="Triangle" parent="." instance=ExtResource("3_t2ifv")]
 transform = Transform3D(-0.152955, 1.33718e-08, 0, -1.33718e-08, -0.152955, 0, 0, 0, 0.020931, -0.131655, 0, -0.489302)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cf2hkdl0fii2t"]
 
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="1_8c6l4"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="1_snlvi"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_t3okl"]
 height = 1.16398
@@ -25,7 +25,7 @@ radial_segments = 16
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mylu6"]
 shading_mode = 0
-albedo_color = Color(0, 1, 0, 1)
+albedo_color = Color(0, 0, 0, 1)
 billboard_keep_scale = true
 
 [sub_resource type="Curve" id="Curve_y6ldj"]
@@ -87,12 +87,12 @@ mesh = SubResource("CylinderMesh_gdn46")
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.501203, 0, 0, 0, 0.0261055, 0, 0, 0, 0.501203, 0, 0.485748, 0)
 mesh = SubResource("CylinderMesh_gdn46")
-surface_material_override/0 = ExtResource("1_8c6l4")
+surface_material_override/0 = ExtResource("1_snlvi")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.43223, 0, 0, 0, 0.0745986, 0, 0, 0, 1.43223, 0, -0.0298439, 0)
 mesh = SubResource("CylinderMesh_gdn46")
-surface_material_override/0 = ExtResource("1_8c6l4")
+surface_material_override/0 = ExtResource("1_snlvi")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639417, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bs5qwjl3v2ahp"]
 
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="1_mr3u4"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="1_nhkhd"]
 
 [sub_resource type="TextMesh" id="TextMesh_sfgpm"]
 text = "Controls"
@@ -28,14 +28,14 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.4363
 
 [node name="Title" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.636263, 0)
-material_override = ExtResource("1_mr3u4")
+material_override = ExtResource("1_nhkhd")
 cast_shadow = 0
 mesh = SubResource("TextMesh_sfgpm")
 skeleton = NodePath("../..")
 
 [node name="Controls" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0968498, 0)
-material_override = ExtResource("1_mr3u4")
+material_override = ExtResource("1_nhkhd")
 cast_shadow = 0
 mesh = SubResource("TextMesh_ub18y")
 skeleton = NodePath("../..")

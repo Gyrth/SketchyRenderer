@@ -29,6 +29,6 @@ func _process(_delta : float) -> void:
 		# Stop updating this script since we are about to leave the scene.
 		set_process(false)
 		# Wait a small amount of time for the vignette to close all the way.
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.0).timeout
 		# Switch to the main level which will automatically clear the current scene.
 		get_tree().change_scene_to_packed(MAIN_LEVEL_RESOURCE)

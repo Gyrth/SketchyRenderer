@@ -14,48 +14,87 @@ grow_vertical = 2
 theme = ExtResource("1_bakoi")
 script = ExtResource("2_4ajr0")
 
-[node name="MainWindow" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(900, 0)
+[node name="MainWindow" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(960, 540)
+mouse_filter = 1
+
+[node name="BackgroundOutline" type="ColorRect" parent="MainWindow"]
+custom_minimum_size = Vector2(1000, 1000)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 500.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[node name="Background" type="ColorRect" parent="MainWindow"]
+custom_minimum_size = Vector2(980, 980)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -490.0
+offset_right = 490.0
+offset_bottom = 490.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsWindow" type="VBoxContainer" parent="MainWindow"]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -450.0
+offset_right = 450.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="MainWindow"]
+[node name="Title" type="Label" parent="MainWindow/SettingsWindow"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 65
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Separator" type="ColorRect" parent="MainWindow"]
+[node name="Separator" type="ColorRect" parent="MainWindow/SettingsWindow"]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 color = Color(0, 0, 0, 0.784314)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainWindow"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainWindow/SettingsWindow"]
+layout_mode = 2
+alignment = 1
+
+[node name="WindowMode" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
 layout_mode = 2
 
-[node name="WindowMode" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
-layout_mode = 2
-
-[node name="WindowModeLabel" type="Label" parent="MainWindow/VBoxContainer/WindowMode"]
+[node name="WindowModeLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/WindowMode"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Window Mode"
 vertical_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="MainWindow/VBoxContainer/WindowMode"]
+[node name="OptionButton" type="OptionButton" parent="MainWindow/SettingsWindow/VBoxContainer/WindowMode"]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
@@ -69,17 +108,17 @@ popup/item_1/id = 1
 popup/item_2/text = "Fullscreen"
 popup/item_2/id = 2
 
-[node name="ScreenEffect" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+[node name="ScreenEffect" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
 layout_mode = 2
 
-[node name="ScreenEffectLabel" type="Label" parent="MainWindow/VBoxContainer/ScreenEffect"]
+[node name="ScreenEffectLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/ScreenEffect"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Screen Effect"
 vertical_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="MainWindow/VBoxContainer/ScreenEffect"]
+[node name="OptionButton" type="OptionButton" parent="MainWindow/SettingsWindow/VBoxContainer/ScreenEffect"]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
@@ -91,17 +130,17 @@ popup/item_0/id = 0
 popup/item_1/text = "Sobol"
 popup/item_1/id = 1
 
-[node name="NoiseOffset" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+[node name="NoiseOffset" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
 layout_mode = 2
 
-[node name="NoiseOffsetLabel" type="Label" parent="MainWindow/VBoxContainer/NoiseOffset"]
+[node name="NoiseOffsetLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/NoiseOffset"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Noise Offset"
 vertical_alignment = 1
 
-[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/NoiseOffset"]
+[node name="Value" type="HSlider" parent="MainWindow/SettingsWindow/VBoxContainer/NoiseOffset"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -109,34 +148,50 @@ max_value = 2.0
 step = 0.01
 value = 0.5
 
-[node name="ShadowAmount" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+[node name="BlackThreshold" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
 layout_mode = 2
 
-[node name="ShadowAmountLabel" type="Label" parent="MainWindow/VBoxContainer/ShadowAmount"]
+[node name="BlackThresholdLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/BlackThreshold"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Shadow Amount"
+text = "Black Threshold"
 vertical_alignment = 1
 
-[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/ShadowAmount"]
+[node name="Value" type="HSlider" parent="MainWindow/SettingsWindow/VBoxContainer/BlackThreshold"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-min_value = -0.1
-max_value = 0.5
+max_value = 2.0
 step = 0.001
-value = -0.1
+value = 0.001
 
-[node name="GrainAmount" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+[node name="WhiteThreshold" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
 layout_mode = 2
 
-[node name="GrainAmountLabel" type="Label" parent="MainWindow/VBoxContainer/GrainAmount"]
+[node name="WhiteThresholdLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/WhiteThreshold"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "White Threshold"
+vertical_alignment = 1
+
+[node name="Value" type="HSlider" parent="MainWindow/SettingsWindow/VBoxContainer/WhiteThreshold"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 2.0
+step = 0.001
+value = 2.0
+
+[node name="GrainAmount" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="GrainAmountLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/GrainAmount"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Grain Amount"
 vertical_alignment = 1
 
-[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/GrainAmount"]
+[node name="Value" type="HSlider" parent="MainWindow/SettingsWindow/VBoxContainer/GrainAmount"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -144,16 +199,16 @@ max_value = 1.0
 step = 0.001
 value = 0.2
 
-[node name="LineSize" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+[node name="LineSize" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
 layout_mode = 2
 
-[node name="LineSizeLabel" type="Label" parent="MainWindow/VBoxContainer/LineSize"]
+[node name="LineSizeLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/LineSize"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Line Size"
 vertical_alignment = 1
 
-[node name="Value" type="HSlider" parent="MainWindow/VBoxContainer/LineSize"]
+[node name="Value" type="HSlider" parent="MainWindow/SettingsWindow/VBoxContainer/LineSize"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -161,22 +216,62 @@ max_value = 2.0
 step = 0.001
 value = 1.0
 
-[node name="TintColor" type="HBoxContainer" parent="MainWindow/VBoxContainer"]
+[node name="ColorPassthrough" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
 layout_mode = 2
 
-[node name="TintColorLabel" type="Label" parent="MainWindow/VBoxContainer/TintColor"]
+[node name="ColorPassthroughLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/ColorPassthrough"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Color Passthrough"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="MainWindow/SettingsWindow/VBoxContainer/ColorPassthrough"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="DepthCheck" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="DepthCheckLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/DepthCheck"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Depth Check"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="MainWindow/SettingsWindow/VBoxContainer/DepthCheck"]
+layout_mode = 2
+size_flags_horizontal = 6
+button_pressed = true
+
+[node name="NormalCheck" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="NormalCheckLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/NormalCheck"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Normal Check"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="MainWindow/SettingsWindow/VBoxContainer/NormalCheck"]
+layout_mode = 2
+size_flags_horizontal = 6
+button_pressed = true
+
+[node name="TintColor" type="HBoxContainer" parent="MainWindow/SettingsWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="TintColorLabel" type="Label" parent="MainWindow/SettingsWindow/VBoxContainer/TintColor"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Tint Color"
 vertical_alignment = 1
 
-[node name="Color" type="ColorPicker" parent="MainWindow/VBoxContainer/TintColor"]
+[node name="Color" type="ColorPicker" parent="MainWindow/SettingsWindow/VBoxContainer/TintColor"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 alignment = 1
 edit_alpha = false
-picker_shape = 1
 can_add_swatches = false
 sampler_visible = false
 color_modes_visible = false
@@ -184,3 +279,24 @@ sliders_visible = false
 hex_visible = false
 presets_visible = false
 metadata/_edit_use_anchors_ = true
+
+[node name="Separator2" type="ColorRect" parent="MainWindow/SettingsWindow"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+color = Color(0, 0, 0, 0.784314)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainWindow/SettingsWindow"]
+layout_mode = 2
+alignment = 1
+
+[node name="Continue" type="Button" parent="MainWindow/SettingsWindow/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Continue"
+
+[node name="Quit" type="Button" parent="MainWindow/SettingsWindow/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"

@@ -3,15 +3,17 @@
 [ext_resource type="Script" path="res://Scripts/character_selection.gd" id="1_306fa"]
 [ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_n3clu"]
 [ext_resource type="PackedScene" uid="uid://c8sxo61ygaqbl" path="res://Objects/girl.glb" id="2_5a1wa"]
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="2_uue58"]
-[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="3_8kqj1"]
 [ext_resource type="PackedScene" uid="uid://bmuxem3tj0s5k" path="res://Objects/boy.glb" id="3_f8okr"]
+[ext_resource type="Material" uid="uid://chivp42kwjv8w" path="res://Materials/white.tres" id="3_tarx5"]
 [ext_resource type="PackedScene" uid="uid://d17b3vsxfycdu" path="res://Objects/screen_effects.tscn" id="4_p1w2n"]
 
-[sub_resource type="Environment" id="Environment_wfm8b"]
+[sub_resource type="Environment" id="Environment_hry2l"]
 background_mode = 1
-ambient_light_source = 2
-ambient_light_color = Color(0, 1, 0, 1)
+background_color = Color(0.513726, 0.513726, 0.513726, 1)
+ambient_light_source = 1
+ambient_light_energy = 0.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_wqi75"]
 
 [sub_resource type="TextMesh" id="TextMesh_4c08n"]
 text = "Choose a fighter!"
@@ -57,7 +59,8 @@ size = Vector2(0.3, 1)
 script = ExtResource("1_306fa")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_wfm8b")
+environment = SubResource("Environment_hry2l")
+camera_attributes = SubResource("CameraAttributesPractical_wqi75")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, -0.248131, 2, 1)
@@ -72,31 +75,17 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScreenEffects" parent="." instance=ExtResource("4_p1w2n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.362479)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.22233)
 
 [node name="ChooseFighter" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 1.46989, 0.384421)
-material_override = ExtResource("2_uue58")
+material_override = ExtResource("3_tarx5")
 cast_shadow = 0
 mesh = SubResource("TextMesh_4c08n")
 
 [node name="Box" parent="." instance=ExtResource("1_n3clu")]
 transform = Transform3D(22.0819, 0, 0, 0, 1, 0, 0, 0, 10.62, 0, -0.5, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_o74xd")
-
-[node name="Box3" parent="." instance=ExtResource("1_n3clu")]
-transform = Transform3D(22.0819, 0, 0, 0, 1, 0, 0, 0, 10.62, 0, -0.5, 0)
-visible = false
-surface_material_override/0 = ExtResource("3_8kqj1")
-
-[node name="Box2" parent="." instance=ExtResource("1_n3clu")]
-transform = Transform3D(22.0819, 0, 0, 0, 16.2884, 0, 0, 0, 2.19606, 0, -0.5, -6.177)
-surface_material_override/0 = ExtResource("3_8kqj1")
-
-[node name="Box4" parent="." instance=ExtResource("1_n3clu")]
-transform = Transform3D(22.0819, 0, 0, 0, 16.2884, 0, 0, 0, 2.19606, 0, -0.5, -6.177)
-visible = false
-surface_material_override/0 = ExtResource("2_uue58")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.990731, 0.135837, 0, -0.135837, 0.990731, 0, 0.972, 1.475)

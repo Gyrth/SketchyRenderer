@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6535ve727uyw"]
 
 [ext_resource type="PackedScene" uid="uid://brmeheptxcohj" path="res://Objects/box.tscn" id="1_e55p7"]
-[ext_resource type="Material" uid="uid://df37tni7gsvuq" path="res://Materials/green.tres" id="2_e4r47"]
+[ext_resource type="Material" uid="uid://5k8cak8mr44j" path="res://Materials/black.tres" id="2_hklaj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_72hlb"]
 size = Vector3(2.08975, 1.92642, 1.71919)
@@ -880,17 +880,17 @@ skeleton = NodePath("../..")
 [node name="Box7" parent="Door" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.0337021, 0, 0, 0, 0.164016, 0, 0, 0, 0.00921592, -0.301043, 0.228103, 0.0636815)
 skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("2_e4r47")
+surface_material_override/0 = ExtResource("2_hklaj")
 
 [node name="Box8" parent="Door" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.0337021, 0, 0, 0, 0.152947, -0.0033282, 0, 0.0592321, 0.00859397, -0.301043, 0.0711877, 0.0339795)
 skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("2_e4r47")
+surface_material_override/0 = ExtResource("2_hklaj")
 
 [node name="Box9" parent="Door" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.0337021, 0, 0, 0, 0.150033, 0.00372346, 0, -0.0662664, 0.00843025, -0.301043, 0.382647, 0.0310055)
 skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("2_e4r47")
+surface_material_override/0 = ExtResource("2_hklaj")
 
 [node name="Box5" parent="Door" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.652966, 0.0625399, 0, -0.652966, 0.0625399, 0, 0, 0, 0.0671365, 0, -0.308594, 0.0180607)
@@ -938,17 +938,17 @@ skeleton = NodePath("../..")
 [node name="Box7" parent="Door2" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.0337021, 0, 0, 0, 0.164016, 0, 0, 0, 0.00921592, -0.301043, 0.228103, 0.0636815)
 skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("2_e4r47")
+surface_material_override/0 = ExtResource("2_hklaj")
 
 [node name="Box8" parent="Door2" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.0337021, 0, 0, 0, 0.152947, -0.0033282, 0, 0.0592321, 0.00859397, -0.301043, 0.0711877, 0.0339795)
 skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("2_e4r47")
+surface_material_override/0 = ExtResource("2_hklaj")
 
 [node name="Box9" parent="Door2" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.0337021, 0, 0, 0, 0.150033, 0.00372346, 0, -0.0662664, 0.00843025, -0.301043, 0.382647, 0.0310055)
 skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("2_e4r47")
+surface_material_override/0 = ExtResource("2_hklaj")
 
 [node name="Box5" parent="Door2" instance=ExtResource("1_e55p7")]
 transform = Transform3D(0.652966, 0.0625399, 0, -0.652966, 0.0625399, 0, 0, 0, 0.0671365, 0, -0.308594, 0.0180607)

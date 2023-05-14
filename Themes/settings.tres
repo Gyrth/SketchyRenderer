@@ -1,6 +1,26 @@
-[gd_resource type="Theme" load_steps=16 format=3 uid="uid://cfpd70cpbjet4"]
+[gd_resource type="Theme" load_steps=26 format=3 uid="uid://cfpd70cpbjet4"]
 
+[ext_resource type="Texture2D" uid="uid://comrtss6twv85" path="res://Textures/check.png" id="1_1sonv"]
 [ext_resource type="FontFile" uid="uid://qgsolq0v3tlv" path="res://Fonts/Kenney Future Narrow.ttf" id="1_dta5d"]
+[ext_resource type="Texture2D" uid="uid://472p42w5xy1x" path="res://Textures/checkbox.png" id="2_qexwa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tnp82"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msvmt"]
+bg_color = Color(0, 0, 0, 0.486275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjusn"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h7m8m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ab4u0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rkpmw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fkdi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxcwc"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_ipsbi"]
 
@@ -48,6 +68,16 @@ bg_color = Color(0.266667, 0.266667, 0.266667, 1)
 default_font = ExtResource("1_dta5d")
 default_font_size = 35
 Button/constants/outline_size = 0
+Button/styles/focus = SubResource("StyleBoxEmpty_tnp82")
+Button/styles/hover = SubResource("StyleBoxFlat_msvmt")
+Button/styles/normal = SubResource("StyleBoxFlat_pjusn")
+CheckBox/icons/checked = ExtResource("1_1sonv")
+CheckBox/icons/unchecked = ExtResource("2_qexwa")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_h7m8m")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_ab4u0")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_rkpmw")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_8fkdi")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_vxcwc")
 HSlider/icons/grabber = SubResource("ImageTexture_ipsbi")
 HSlider/icons/grabber_highlight = SubResource("ImageTexture_8oxs8")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_knqjj")
