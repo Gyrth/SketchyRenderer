@@ -213,7 +213,7 @@ camera_attributes = SubResource("CameraAttributesPractical_fchfb")
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, -0.541675, 0.45452, -2.10734e-08, 0.642788, 0.766044, -0.707107, -0.541675, 0.45452, -2.65041, 2.17968, 1.15116)
 shadow_enabled = true
-directional_shadow_mode = 1
+directional_shadow_max_distance = 25.0
 
 [node name="Settings" parent="." instance=ExtResource("2_quenk")]
 
