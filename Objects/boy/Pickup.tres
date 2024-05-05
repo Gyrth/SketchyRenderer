@@ -2,7 +2,6 @@
 
 [resource]
 resource_name = "G_Pickup"
-length = 3.0
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true

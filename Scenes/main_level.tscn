@@ -138,9 +138,9 @@ point_count = 2
 curve = SubResource("Curve_hjooq")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ijq7"]
+particle_flag_align_y = true
 emission_shape = 3
 emission_box_extents = Vector3(2, 0, 2)
-particle_flag_align_y = true
 gravity = Vector3(0, -19.6, 0)
 scale_min = 0.1
 scale_max = 0.5
@@ -150,9 +150,9 @@ scale_curve = SubResource("CurveTexture_ahfab")
 size = Vector3(0.001, 1, 0.001)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ccf3j"]
+particle_flag_align_y = true
 emission_shape = 3
 emission_box_extents = Vector3(2, 0, 2)
-particle_flag_align_y = true
 gravity = Vector3(0, 0, 0)
 scale_min = 0.1
 scale_max = 0.5
@@ -173,9 +173,9 @@ curve = SubResource("Curve_gs6b8")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_50cuc"]
 direction = Vector3(0, 1, 0)
-gravity = Vector3(0, 0.25, 0)
 initial_velocity_min = 0.5
 initial_velocity_max = 0.6
+gravity = Vector3(0, 0.25, 0)
 scale_min = 0.1
 scale_max = 0.2
 scale_curve = SubResource("CurveTexture_xqgbe")
@@ -797,7 +797,6 @@ amount = 10
 lifetime = 0.2
 randomness = 1.0
 interpolate = false
-trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_ccf3j")
 draw_pass_1 = SubResource("TorusMesh_msow4")
 
@@ -1386,34 +1385,34 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0.6993
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.00839, -0.00232601, -1.26142)
 
 [node name="books" parent="bookcaseOpen2" instance=ExtResource("29_26ji6")]
-transform = Transform3D(-1, 8.7423e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7423e-08, 1, 4.37114e-08, 0.36053, 0.221345, -0.15978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0229454, 0.130233, -0.0407362)
 
 [node name="books2" parent="bookcaseOpen2" instance=ExtResource("29_26ji6")]
-transform = Transform3D(1, 1.50996e-07, 6.60025e-15, 0, -4.37114e-08, 1, -1.50996e-07, 1, 4.37114e-08, 0.0605201, 0.221345, -0.164145)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0631695, 0.369068, -0.0458052)
 
 [node name="books3" parent="bookcaseOpen2" instance=ExtResource("29_26ji6")]
-transform = Transform3D(-1, 8.7423e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7423e-08, 1, 4.37114e-08, 0.36053, 0.463011, -0.15978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.195346, 0.606759, -0.0500931)
 
 [node name="books4" parent="bookcaseOpen2" instance=ExtResource("29_26ji6")]
-transform = Transform3D(1, 1.50996e-07, 6.60025e-15, 0, -4.37114e-08, 1, -1.50996e-07, 1, 4.37114e-08, 0.0605201, 0.463011, -0.164145)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0468146, 0.609366, -0.0500931)
 
 [node name="books5" parent="bookcaseOpen2" instance=ExtResource("29_26ji6")]
-transform = Transform3D(-1, 8.7423e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7423e-08, 1, 4.37114e-08, 0.36053, 0.703093, -0.15978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215737, 0.372717, -0.0394777)
 
 [node name="books6" parent="bookcaseOpen2" instance=ExtResource("29_26ji6")]
-transform = Transform3D(1, 1.50996e-07, 6.60025e-15, 0, -4.37114e-08, 1, -1.50996e-07, 1, 4.37114e-08, 0.0605201, 0.703093, -0.164145)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.171035, 0.127644, -0.0407362)
 
 [node name="bookcaseOpenLow2" parent="." instance=ExtResource("32_o4adb")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.70427, -0.00232589, -1.27113)
 
 [node name="cardboardBoxClosed" parent="bookcaseOpenLow2" instance=ExtResource("34_lcgvi")]
-transform = Transform3D(0.97083, 0, -0.239771, 0, 1, 0, 0.239771, 0, 0.97083, 0.0703549, 0.366136, -0.02158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092865, 0.369988, -0.00642061)
 
 [node name="cabinetBed" parent="." instance=ExtResource("30_64om3")]
 transform = Transform3D(2, 3.01992e-07, -3.49691e-07, -3.01992e-07, 2, 0, -3.49691e-07, -5.28019e-14, -2, -0.177144, -0.00234839, -4.36733)
 
 [node name="lampRoundTable" parent="cabinetBed" instance=ExtResource("54_t4qo1")]
-transform = Transform3D(-0.999981, -1.50996e-07, -0.0062307, -1.50993e-07, 1, -9.40809e-10, -0.0062307, -8.47033e-22, 0.999981, 0.179642, 0.23191, -0.037683)
+transform = Transform3D(1, 4.61609e-21, 0, 4.61609e-21, 1, 0, 0, 0, 1, 0.0690109, 0.232595, -0.0307677)
 
 [node name="cabinetBedDrawer2" parent="." instance=ExtResource("36_mcu8r")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -2.03128, -0.00232601, -4.48843)
@@ -1437,13 +1436,13 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.13598, 0.866623, -3.53245)
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 6.0589, -0.00232601, -5.86047)
 
 [node name="computerKeyboard" parent="desk2" instance=ExtResource("41_d7ve3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.181402, 0.383668, -0.0191305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200351, 0.388199, 0)
 
 [node name="computerMouse" parent="desk2" instance=ExtResource("42_ixvoj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.540549, 0.383668, -0.0541632)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.548224, 0.383454, -9.53674e-07)
 
 [node name="computerScreen" parent="desk2" instance=ExtResource("43_p4oyv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136688, 0.383668, -0.195574)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16626, 0.383348, -0.194405)
 
 [node name="deskCorner2" parent="." instance=ExtResource("47_ump17")]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 2.09406, -0.00232601, 2.03186)
@@ -1518,10 +1517,8 @@ transform = Transform3D(-1.19209e-07, 0, -2, 0, 2, 0, 2, 0, -1.19209e-07, 4.7215
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.45113, -0.00232577, 1.2232)
 
 [node name="pillow" parent="loungeSofa2" instance=ExtResource("63_47lbo")]
-transform = Transform3D(0.707105, 0, -0.707105, 0, 1, 0, 0.707105, 0, 0.707105, 0.67708, 0.209608, -0.278109)
 
 [node name="pillow2" parent="loungeSofa2" instance=ExtResource("63_47lbo")]
-transform = Transform3D(0.707105, 0, 0.707105, 0, 1, 0, -0.707105, 0, 0.707105, 0.15298, 0.209608, -0.132975)
 
 [node name="paneling" parent="." instance=ExtResource("62_xqps3")]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 2.37955, -0.00232601, -3.7934)
@@ -1616,7 +1613,7 @@ transform = Transform3D(0.70946, 0, 0.704746, 0, 1, 0, -0.704746, 0, 0.70946, 1.
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -0.389132, -0.00232601, -1.75929)
 
 [node name="radio" parent="sideTable2" instance=ExtResource("31_et4nc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189392, 0.37203, -0.0717906)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101721, 0.384253, -0.0539829)
 
 [node name="sideTableDrawers2" parent="." instance=ExtResource("80_06cev")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 6.42612, -0.152023, 0.520672)
@@ -1625,13 +1622,13 @@ transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 6.4261
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -2.51433, -0.00232601, -0.297062)
 
 [node name="chairModernFrameCushion4" parent="tableCloth2" instance=ExtResource("81_pu2uc")]
-transform = Transform3D(0.950358, 0, -0.311157, 0, 1, 0, 0.311157, 0, 0.950358, 0.48212, 0, -0.485558)
+transform = Transform3D(-0.989407, 0, -0.145168, 0, 1, 0, 0.145168, 0, -0.989407, 0.679188, 5.96046e-08, -0.121638)
 
 [node name="chairModernFrameCushion" parent="tableCloth2" instance=ExtResource("81_pu2uc")]
-transform = Transform3D(0.989379, 0, 0.145358, 0, 1, 0, -0.145358, 0, 0.989379, 0.110815, 0, -0.340132)
+transform = Transform3D(0.992803, 0, 0.119756, 0, 1, 0, -0.119756, 0, 0.992803, 0.140487, 0, -0.362962)
 
 [node name="chairModernFrameCushion2" parent="tableCloth2" instance=ExtResource("81_pu2uc")]
-transform = Transform3D(-0.993288, 0, 0.115665, 0, 1, 0, -0.115665, 0, -0.993288, 0.344557, 0, -0.0498775)
+transform = Transform3D(0.983891, 0, -0.178768, 0, 1, 0, 0.178768, 0, 0.983891, 0.513335, 0, -0.383918)
 
 [node name="tableCoffee2" parent="." instance=ExtResource("83_eux2e")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.73664, -0.00232601, 2.45896)
